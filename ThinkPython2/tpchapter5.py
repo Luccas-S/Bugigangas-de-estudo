@@ -173,5 +173,18 @@ if 0 < x:
     if x < 10:
         print('x is a positive single-digit number.')
 
+"A instrução print só é executada se a colocarmos depois de ambas as 
+condicionais, então podemos obter o mesmo efeito com o operador and."
+
+if 0 < x and x < 10:
+    print('x is a positive single-digit number.')
+
+"Para este tipo de condição, o Python oferece uma opção mais concisa."
+
+if 0 < x < 10:
+    print('x is a positive single-digit number.')
+
+RECURSIVIDADE
+
 
 """
