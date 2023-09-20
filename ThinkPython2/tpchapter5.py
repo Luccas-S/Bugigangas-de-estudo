@@ -71,5 +71,107 @@ Qualquer número que não seja zero é interpretado como True."
 EXECUÇÃO CONDICIONAL
 
 Execuções condicionais são partes do programa que verificam uma condição
-e baseada nela, procede 
+e baseada nela, procede a execução de maneiras diferentes, mudando o
+comportamento do programa de acordo. A maneira mais básica de criar uma
+instrução condicional é o "if". O exemplo abaixo denota como um if básico
+funciona direto no console do Python:
+
+if x > 0:
+    print('x is positive')
+
+Rápidamente podemos perceber que no exemplo usado temos uma
+expressão booleana, esta é a condição, se verdadeira, a instrução
+abaixo do if é executada, caso contrário nada acontece.
+
+Uma instrução if tem uma estrutura muito semelhante a uma definição
+de função com cabeçalho e corpo indentado. Esse tipo de instrução é
+uma instrução composta.
+
+"Não há limite para o número de instruções que podem aparecer no corpo, 
+mas deve haver pelo menos uma. Ocasionalmente, é útil ter um corpo 
+sem instruções (normalmente como um espaço reservado para código que 
+ainda não foi escrito). 
+Neste caso, você pode usar a instrução pass, que não faz nada."
+
+if x < 0:
+    pass
+
+EXECUÇÃO ALTERNATIVA
+
+Outra forma de usar uma instrução if é usando uma execução alternativa,
+onde existem duas(ou mais) possibilidades e a condição determina qual será
+executada, segue exemplo abaixo:
+
+if x % 2 == 0
+    print('X is even')
+else:
+    print('X is odd')
+
+No exemplo acima a instrução tem como condição o resto da divisão de X por 2,
+caso o resto seja igual a 0, a execução do código vai devolver um print
+dizendo que X é par. Caso contrário, a execução vai devolver uma print
+que diz que X é impar. Neste caso, a condição deve ser verdadeira ou falsa
+e apenas uma das alternativas será executada. Cada alternativa possível
+numa instrução if tem o nome de "branch", que são ramos diferentes no fluxo
+de execução.
+
+CONDICIONAIS ENCADEADAS
+
+Em uma instrução condicional existe a chance de termos que lidar com
+multiplas possibilidades de execução do código e precisamos de mais branches.
+No exemplo a seguir podemos ver uma operação de computação expressada de
+forma que teremos uma condicional encadeada:
+
+if x < y:
+    print('X is less than Y')
+elif x > y:
+    print('X is greater than Y')
+else:
+    print('X and Y are equal')
+
+No exemplo acima usamos uma instrução chamada "elif", esta é uma abreviatura
+da instrução "else if". Neste caso, mais uma vez apenas uma branch será
+executada. Não existem limites para o número de instruções elif que
+podem ser usadas. Se houver uma cláusula else, ela deve estar no fim, mas
+não é preciso haver uma.
+
+if choice == 'a':
+    draw_a()
+elif choice == 'b':
+    draw_b()
+elif choice == 'c':
+    draw_c()
+
+Neste caso vemos que cada condição da instrução if é verificada em ordem,
+se a primeira for falsa, então o programa executa a próxima e a verifica e
+assim por diante, quando uma for verdadeira, a branch será executada e o 
+if é encerrado. Mesmo se mais de uma condição for verdadeira, só a primeira
+branch verdadeira será executada.
+
+CONDICIONAIS ANINHADAS
+
+Uma condicional aninhada é uma instrução if indentada 
+dentro de outro if que é executada caso uma condição específica 
+do if em que reside for verdadeira. Podemos escrever a estrutura descrita
+da seguinte maneira:
+
+if x == y:
+    print('x and y are equal')
+else:
+    if x < y:
+        print('x is less than y')
+    else:
+        print('x is greater than y')
+
+A condicional "primária" contém duas branches, a primeira contém uma
+instrução simples, já a segunda branch contém outra instrução if que
+tem outros dois ramos que serão verificados.
+
+Existem formas de evitar essa estrutura aninhada usando operadores lógicos.
+
+if 0 < x:
+    if x < 10:
+        print('x is a positive single-digit number.')
+
+
 """
