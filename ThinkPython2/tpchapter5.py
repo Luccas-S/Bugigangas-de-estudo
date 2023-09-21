@@ -285,4 +285,44 @@ What are you waiting for?
 Diferente do exemplo acima, normalmente é interessante exibir um prompt dizendo ao usuário 
 o que ele deve digitar, para estes casos, input pode ter um prompt como argumento.
 
+>>> name = input('What...is your name?\\n')
+What...is your name?
+Arthur, King of the Britons!
+>>> name
+Arthur, King of the Britons!
+
+No exemplo acima vemos a sequência "\n" no final do prompt que 
+representa uma newline(quebra de linha).
+
+Caso espere que o usuário digite um número inteiro, você pode tentar converter o valor de
+retorno para um tipo int:
+
+>>> prompt = 'What...is the airspeed velocity of an unladen swallow?\\n'
+>>> speed = input(prompt)
+What...is the airspeed velocity of an unladen swallow?
+42
+>>> int(speed)
+42
+
+No caso de um usuário digitar algo além de uma série de dígitos, você recebe um erro:
+
+>>> speed = input(prompt)
+What...is the airspeed velocity of an unladen swallow?
+What do you mean, an African or a European swallow?
+>>> int(speed)
+ValueError: invalid literal for int() with base 10
+
+DEPURAÇÃO
+
+Quando um erro de sintaxe ou de tempo de execução ocorre, a mensagem de erro contém 
+muita informação, às vezes, até demais. As partes mais úteis são normalmente:
+
+Que tipo de erro foi;
+
+Onde ocorreu;
+
+Erros de sintaxe são normalmente fáceis de encontrar, mas há algumas pegadinhas. Erros de whitespace podem ser complicados porque os espaços e tabulações são invisíveis e estamos acostumados a ignorá-los.
+
+
+
 """
