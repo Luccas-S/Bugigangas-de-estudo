@@ -238,6 +238,38 @@ Cada vez que uma função é chamada, o Python cria um frame para conter as
 variáveis locais e parâmetros da função. Para uma função recursiva, pode haver mais de um 
 frame na pilha ao mesmo tempo.
 
+RECURSIVIDADE INFINITA
+
+Para os casos onde a recursividade nunca atinge um caso-base, a mesma continuará fazendo 
+chamadas recursivas para sempre, neste caso o programa nunca termina a execução. Este fenômeno
+tem o nome de recursividade infinita e em praticamente todos os casos não é uma boa ideia.
+Abaixo segue exemplo de um programa que apesar de mínimo em tamanho, tem recursividade infinita:
+
+def recurse():
+    recurse()
+
+Na grande maioria dos ambientes de programação, um programa com recursividade infinita não é
+de fato executado para sempre. O Python exibe uma mensagem de erro quando o limite da stack é
+atingido. Segue exemplo do erro:
+
+  File "<stdin>", line 2, in recurse
+  File "<stdin>", line 2, in recurse
+  File "<stdin>", line 2, in recurse
+                  .
+                  .
+                  .
+  File "<stdin>", line 2, in recurse
+RuntimeError: Maximum recursion depth exceeded
+
+Este traceback é um pouco maior que o que vimos no capítulo anterior. 
+Quando o erro ocorre, há mil frames de recurse na pilha!
+
+Se você escrever em recursividade infinita por engano, confira se a sua 
+função tem um caso-base que não faz uma chamada recursiva. 
+E se houver um caso-base, verifique se você vai mesmo atingi-lo.
+
+ENTRADA DE TECLADO
+
 
 
 """
