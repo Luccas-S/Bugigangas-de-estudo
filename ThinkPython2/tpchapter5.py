@@ -270,6 +270,19 @@ E se houver um caso-base, verifique se você vai mesmo atingi-lo.
 
 ENTRADA DE TECLADO
 
+Em todas as estruturas que escrevemos até agora nós mesmos controlamos os dados usados em
+variáveis e parâmetros, logo, os programas sempre fazem a mesma coisa cada vez que executados.
 
+Contudo, o Python nos fornece uma função chamada "input" que interrompe a execuççao do programa
+e aguarda o usuário digitar algo. Quando o usuário apertar return ou enter, o programa volta a
+execução normal e input retorna o que o usuário digitou como uma string.
+
+>>> text = input()
+What are you waiting for?
+>>> text
+What are you waiting for?
+
+Diferente do exemplo acima, normalmente é interessante exibir um prompt dizendo ao usuário 
+o que ele deve digitar, para estes casos, input pode ter um prompt como argumento.
 
 """
