@@ -186,5 +186,58 @@ if 0 < x < 10:
 
 RECURSIVIDADE
 
+No Python3 podemos utilizar o recurso de chamar uma função em outra função ou ainda uma
+função chamar a si própria. Veja um exemplo de uma estrutura que usa recursividade:
+
+def countdown(n):
+    if n <= 0:
+        print('Blastoff!')
+    else:
+        print(n)
+        countdown(n-1)
+
+Nesta estrutura, observamos que se o parâmetro "n" for igual ou menor que 0, a função printa
+a palavra "Blastoff!", caso contrário, a saída será o próprio "n" sendo exibido no console
+e então a função chama a si mesma usando "n-1" como argumento, e o processo continua até que
+a condição préviamente dita seja atingida. O resultado esperado de chamar a função da seguinte
+forma "countdown(3)" será algo como isto:
+
+3
+2
+1
+Blastoff!
+
+Funções que chamam outras ou a si mesmas são ditas recursivas.
+
+Podemos escrever outro exemplo de uma estrutura que exibe uma string n vezes:
+
+def print_n(s, n):
+    if n <= 0:
+        return
+    print(s)
+    print_n(s, n-1)
+
+Se n <= 0 a instrução return causa a saída da função. 
+O fluxo de execução volta imediatamente a quem fez a chamada, 
+e as linhas restantes da função não são executadas.
+
+O resto da função é similar à countdown: ela mostra s e então chama a si mesma para mostrar s 
+mais n-1 vezes. Então o número de linhas da saída é 1 + (n - 1), até chegar a n.
+
+Para exemplos simples como esse, provavelmente é mais fácil usar um loop for. 
+Mais adiante veremos exemplos que são difíceis de escrever com um loop for e 
+fáceis de escrever com recursividade, então é bom começar cedo.
+
+DIAGRAMAS DA PILHA PARA FUNÇÕES RECURSIVAS
+
+Anteriormente na página 55 introduzimos o conceito de "Diagramas da Pilha", usamos um diagrama
+da pilha para representar o estado de um programa durante uma chamada de função. Podemos
+usar o mesmo tipo de diagrama para ajudar a interpretar uma função recursiva.
+
+Cada vez que uma função é chamada, o Python cria um frame para conter as 
+variáveis locais e parâmetros da função. Para uma função recursiva, pode haver mais de um 
+frame na pilha ao mesmo tempo.
+
+
 
 """
