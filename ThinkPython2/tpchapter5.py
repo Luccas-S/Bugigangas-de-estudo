@@ -321,8 +321,45 @@ Que tipo de erro foi;
 
 Onde ocorreu;
 
-Erros de sintaxe são normalmente fáceis de encontrar, mas há algumas pegadinhas. Erros de whitespace podem ser complicados porque os espaços e tabulações são invisíveis e estamos acostumados a ignorá-los.
+Erros de sintaxe são normalmente fáceis de encontrar, mas há algumas pegadinhas. 
+Erros de whitespace podem ser complicados porque os espaços e tabulações são invisíveis e 
+estamos acostumados a ignorá-los. Segue exemplo do erro em questão visto diretamente do console:
 
+>>> x = 5
+>>> y = 6
+  File "<stdin>", line 1
+    y = 6
+    ^
+IndentationError: unexpected indent
 
+Neste exemplo, o problema é que a segunda linha está endentada por um espaço. 
+Mas a mensagem de erro aponta para y, o que pode ser capcioso. 
+Em geral, mensagens de erro indicam onde o problema foi descoberto, mas o erro real 
+pode estar em outra parte do código, às vezes, em uma linha anterior.
+
+O mesmo acontece com erros em tempo de execução. Suponha que você esteja tentando calcular a 
+proporção de sinal a ruído em decibéis. A fórmula é SNRdb = 10 log10 (Psignal/Pnoise). 
+No Python, você poderia escrever algo assim:
+
+import math
+signal_power = 9
+noise_power = 10
+ratio = signal_power // noise_power
+decibels = 10 * math.log10(ratio)
+print(decibels)
+
+Ao executar este programa, você recebe uma exceção:
+
+Traceback (most recent call last):
+  File "snr.py", line 5, in ?
+    decibels = 10 * math.log10(ratio)
+ValueError: math domain error
+
+Neste caso, mesmo com o console denunciando erro na linha 5, não ha nada de errado com a mesma.
+Podemos identificar o verdadeiro problema exibindo o valor de ratio, 
+descobrindo que resultou em 0. O problema está na linha 4, que usa divisão pelo piso em vez 
+da divisão de ponto flutuante.
 
 """
+
+
