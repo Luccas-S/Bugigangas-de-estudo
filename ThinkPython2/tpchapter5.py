@@ -388,4 +388,3 @@ Neste exercício usamos uma época fixa do sistema UNIX, no caso seria 1 de jane
 calculamos os dias, horas, minutos e segundos que se passaram desde então e printamos os resultados.
 """
 
-
