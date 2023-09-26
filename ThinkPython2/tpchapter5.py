@@ -362,4 +362,30 @@ da divisão de ponto flutuante.
 
 """
 
+"""
+EXERCÍCIO 5.1
+import time
+O módulo time fornece uma função, também chamada time, que devolve a Hora 
+Média de Greenwich na “época”, que é um momento arbitrário usado como ponto de referência.
+
+def ctime(h, m, s):
+
+    sec = time.time()
+    numday = sec / (60*60*24)
+    
+    hours = h / 3600
+    minutes = m / 60
+    seconds = s
+
+    print("O número de horas que se passaram desde a época é: %f" % hours)
+    print("O número de minutos que se passaram desde a época é: %f" % minutes)
+    print("O número de segundos que se passaram desde a época é: %f" % seconds)
+    print("O número de dias que se passaram desde a época é: %f" % numday)
+
+ctime(time.time(), time.time(), time.time())
+
+Neste exercício usamos uma época fixa do sistema UNIX, no caso seria 1 de janeiro de 1970,
+calculamos os dias, horas, minutos e segundos que se passaram desde então e printamos os resultados.
+"""
+
 
