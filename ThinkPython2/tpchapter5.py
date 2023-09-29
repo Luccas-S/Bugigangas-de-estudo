@@ -360,17 +360,15 @@ Podemos identificar o verdadeiro problema exibindo o valor de ratio,
 descobrindo que resultou em 0. O problema está na linha 4, que usa divisão pelo piso em vez 
 da divisão de ponto flutuante.
 
-"""
-
-"""
 EXERCÍCIO 5.1
 import time
-O módulo time fornece uma função, também chamada time, que devolve a Hora 
-Média de Greenwich na “época”, que é um momento arbitrário usado como ponto de referência.
+#O módulo time fornece uma função, também chamada time, que devolve a Hora 
+#Média de Greenwich na “época”, que é um momento arbitrário usado como ponto de referência.
 
-def ctime(h, m, s):
+epoca = time.mktime(input("Digite um ano do passado: "))
 
-    sec = time.time()
+def ctime(h, m, s, sec):
+    
     numday = sec / (60*60*24)
     
     hours = h / 3600
@@ -382,9 +380,33 @@ def ctime(h, m, s):
     print("O número de segundos que se passaram desde a época é: %f" % seconds)
     print("O número de dias que se passaram desde a época é: %f" % numday)
 
-ctime(time.time(), time.time(), time.time())
+ctime(epoca, epoca, epoca, epoca)
 
-Neste exercício usamos uma época fixa do sistema UNIX, no caso seria 1 de janeiro de 1970,
-calculamos os dias, horas, minutos e segundos que se passaram desde então e printamos os resultados.
+#Neste exercício usamos uma época fixa do sistema UNIX, no caso seria 1 de janeiro de 1970,
+#calculamos os dias, horas, minutos e segundos que se passaram desde então e printamos os resultados.
+
+EXERCÍCIO 5.2(1)
+
+"O último teorema de Fermat diz que não existem números inteiros 
+a, b e c tais que a**n + b**n == c**n para quaisquer valores de n maiores que 2."
+
 """
+import math
 
+def check_fermat(a, b, c, n):
+    if n > 2 and a**n + b**n == c**n:
+        print("Holy Smokes, Fermat was wrong!")
+    else:
+        print("No, that doesn't work.")
+
+def run_cf():
+	for a in range(1, 100):
+		for b in range(1, 100):
+			for c in range(1, 100):
+				for n in range(3, 100):
+					check_fermat(a, b, c, n)
+					
+check_fermat(2, 3, 4, 2)
+check_fermat(3, 4, 5, 2) 
+
+run_cf()
