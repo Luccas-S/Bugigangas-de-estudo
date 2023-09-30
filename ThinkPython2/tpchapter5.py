@@ -385,12 +385,11 @@ ctime(epoca, epoca, epoca, epoca)
 #Neste exercício usamos uma época fixa do sistema UNIX, no caso seria 1 de janeiro de 1970,
 #calculamos os dias, horas, minutos e segundos que se passaram desde então e printamos os resultados.
 
-EXERCÍCIO 5.2(1)
+EXERCÍCIO 5.2
 
 "O último teorema de Fermat diz que não existem números inteiros 
 a, b e c tais que a**n + b**n == c**n para quaisquer valores de n maiores que 2."
 
-"""
 import math
 
 def check_fermat(a, b, c, n):
@@ -409,4 +408,14 @@ def run_cf():
 check_fermat(2, 3, 4, 2)
 check_fermat(3, 4, 5, 2) 
 
-run_cf()
+#run_cf()
+
+def check_fermat_custom():
+	a = input("Please in put a: ")
+	b= input("Please in put b: ")
+	c = input("Please in put c: ")
+	n = input("Please input n: ")
+	return check_fermat(a, b, c, n)
+	
+check_fermat_custom()
+"""
