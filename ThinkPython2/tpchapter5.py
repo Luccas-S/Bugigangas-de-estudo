@@ -418,4 +418,19 @@ def check_fermat_custom():
 	return check_fermat(a, b, c, n)
 	
 check_fermat_custom()
+
+EXERCÍCIO 5.3
+
+comp1 = int(input("Digite um comprimento: "))
+comp2 = int(input("Digite o segundo comprimento: "))
+comp3 = int(input("Digite o terceiro comprimento: "))
+
+def is_triangle(a, b , c):
+    if a > b + c or b > a + c or c > a + b:
+        print("Não formará um triângulo")
+    else:
+        print("Formará um triângulo")
+
+is_triangle(comp1, comp2, comp3)
 """
+
