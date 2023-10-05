@@ -97,21 +97,30 @@ raiz de (x2 - x1)² + (y2 - y1)²
 O primeiro passo é pensar como uma função distance deveria ser no Python. 
 Em outras palavras, quais são as entradas (parâmetros) e qual é a saída (valor de retorno)?
 
-Nesse caso, as entradas são dois pontos que você pode representar usando quatro números. O valor de retorno é a distância representada por um valor de ponto flutuante.
+Nesse caso, as entradas são dois pontos que você pode representar usando quatro números. 
+O valor de retorno é a distância representada por um valor de ponto flutuante.
 
 Imediatamente, é possível escrever um rascunho da função:
 
 def distance(x1, y1, x2, y2):
     return 0.0
-Claro que esta versão não calcula distâncias; sempre retorna zero. Mas está sintaticamente correta, e pode ser executada, o que significa que você pode testá-la antes de torná-la mais complicada.
+
+Claro que esta versão não calcula distâncias; sempre retorna zero. Mas está sintaticamente 
+correta, e pode ser executada, o que significa que você pode testá-la antes de torná-la 
+mais complicada.
 
 Para testar a nova função, chame-a com argumentos de amostra:
 
 >>> distance(1, 2, 4, 6)
 0.0
-Escolhi esses valores para que a distância horizontal seja 3 e a distância vertical, 4; assim, o resultado final é 5, a hipotenusa de um triângulo 3-4-5. Ao testar uma função, é útil saber a resposta certa.
 
-Neste ponto confirmamos que a função está sintaticamente correta, e podemos começar a acrescentar código ao corpo. Um próximo passo razoável é encontrar as diferenças x2 − x1 e y2 − y1. A próxima versão guarda esses valores em variáveis temporárias e os exibe:
+Escolhi esses valores para que a distância horizontal seja 3 e a distância vertical, 4; 
+assim, o resultado final é 5, a hipotenusa de um triângulo 3-4-5. 
+Ao testar uma função, é útil saber a resposta certa.
+
+Neste ponto confirmamos que a função está sintaticamente correta, e podemos começar a 
+acrescentar código ao corpo. Um próximo passo razoável é encontrar as diferenças 
+x2 - x1 e y2 - y1. A próxima versão guarda esses valores em variáveis temporárias e os exibe:
 
 def distance(x1, y1, x2, y2):
     dx = x2 - x1
@@ -119,5 +128,31 @@ def distance(x1, y1, x2, y2):
     print('dx is', dx)
     print('dy is', dy)
     return 0.0
+
+Se a função estiver funcionando, deve exibir dx is 3 e dy is 4. Nesse caso sabemos que a 
+função está recebendo os argumentos corretos e executando o primeiro cálculo acertadamente. 
+Se não, há poucas linhas para verificar.
+
+Depois calculamos a soma dos quadrados de dx e dy:
+
+def distance(x1, y1, x2, y2):
+    dx = x2 - x1
+    dy = y2 - y1
+    dsquared = dx**2 + dy**2
+    print('dsquared is: ', dsquared)
+    return 0.0
+
+Nesta etapa você executaria o programa mais uma vez e verificaria a saída (que deve ser 25). 
+Finalmente, pode usar math.sqrt para calcular e devolver o resultado:
+
+def distance(x1, y1, x2, y2):
+    dx = x2 - x1
+    dy = y2 - y1
+    dsquared = dx**2 + dy**2
+    result = math.sqrt(dsquared)
+    return result
+
+Se funcionar corretamente, pronto. Senão, uma ideia é exibir o valor result antes da 
+instrução de retorno.
 
 """
