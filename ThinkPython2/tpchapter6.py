@@ -155,4 +155,28 @@ def distance(x1, y1, x2, y2):
 Se funcionar corretamente, pronto. Senão, uma ideia é exibir o valor result antes da 
 instrução de retorno.
 
+Podemos notar que a versão final não exibe nada quando executada; apenas retorna um valor.
+Apesar de úteis para depuração, as intruções que usamos não precisam ser exibidas na versão
+final, assim que a depuração acaba, o ideal seria remover as exibições desnecessárias assim
+que o funcionamento do programa for conferido. Códigos dessa estirpe são chamados de
+scaffolding(andaime) porque são úteis para construir e depurar um programa, mas não fazem
+parte do produto final. O tamanho das parcelas de código para depurar podem aumentar com
+a experiência do programador, independente da experiência, o desenvolvimento incremental
+economiza muito tempo de depuração.
+
+Os principais aspectos do processo são:
+
+1 - Comece com um programa que funcione e faça pequenas alterações incrementais. 
+Se houver um erro em qualquer ponto, será bem mais fácil encontrá-lo.
+
+2 - Use variáveis para guardar valores intermediários, assim poderá exibi-los e verificá-los.
+
+3 - Uma vez que o programa esteja funcionando, você pode querer remover uma parte do scaffolding
+ou consolidar várias instruções em expressões compostas, mas apenas se isso não tornar 
+o programa difícil de ler.
+
+COMPOSIÇÃO
+
+
+
 """
