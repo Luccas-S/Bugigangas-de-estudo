@@ -86,6 +86,38 @@ Conforme você desenvolver funções mais longas, pode ser que passe mais
 tempo as depurando.
 
 Para lidar com esse tipo cada vez mais extenso de programa, você pode
-usar o recurso do desenvolvimento incremental. 
+usar o recurso do desenvolvimento incremental. A intenção ao utilizar desenvolvimento
+incremental é evadir sessões longas de depuração ao mesmo tempo que diminui a margem de erro
+já que partes menores do código são adicionadas de cada vez.
+
+Como um exemplo, vamos supor que você queira encontrar a distância entre dois pontos dados 
+pelas coordenadas (x1, y1) e(x2, y2). Pelo teorema de Pitágoras, a distância é igual a
+raiz de (x2 - x1)² + (y2 - y1)²
+
+O primeiro passo é pensar como uma função distance deveria ser no Python. 
+Em outras palavras, quais são as entradas (parâmetros) e qual é a saída (valor de retorno)?
+
+Nesse caso, as entradas são dois pontos que você pode representar usando quatro números. O valor de retorno é a distância representada por um valor de ponto flutuante.
+
+Imediatamente, é possível escrever um rascunho da função:
+
+def distance(x1, y1, x2, y2):
+    return 0.0
+Claro que esta versão não calcula distâncias; sempre retorna zero. Mas está sintaticamente correta, e pode ser executada, o que significa que você pode testá-la antes de torná-la mais complicada.
+
+Para testar a nova função, chame-a com argumentos de amostra:
+
+>>> distance(1, 2, 4, 6)
+0.0
+Escolhi esses valores para que a distância horizontal seja 3 e a distância vertical, 4; assim, o resultado final é 5, a hipotenusa de um triângulo 3-4-5. Ao testar uma função, é útil saber a resposta certa.
+
+Neste ponto confirmamos que a função está sintaticamente correta, e podemos começar a acrescentar código ao corpo. Um próximo passo razoável é encontrar as diferenças x2 − x1 e y2 − y1. A próxima versão guarda esses valores em variáveis temporárias e os exibe:
+
+def distance(x1, y1, x2, y2):
+    dx = x2 - x1
+    dy = y2 - y1
+    print('dx is', dx)
+    print('dy is', dy)
+    return 0.0
 
 """
