@@ -177,6 +177,36 @@ o programa difícil de ler.
 
 COMPOSIÇÃO
 
+Já vimos antes que podemos chamar uma função dentro de outra, podemos exemplificar isso com
+o seguinte raciocínio e exemplos:
+
+Escrevemos uma função que recebe dois pontos, o centro do círculo e um ponto no perímetro para
+calcular a área do círculo. Supondo que o ponto central esteja armazenado nas variáveis xc e yc
+enquanto que o perímetro está em xp e yp. Devemos primeiro encontrar o raio do círculo
+(distância entre os dois pontos). Com isso, escrevemos a função distance, que faz isto:
+
+radius = distance(xc, yc, xp, yp)
+
+A próxima etapa é encontrar a área de um círculo com aquele raio, escrevemos isso também:
+
+result = area(radius)
+
+Quando encapsulamos esses passos numa função, obtemos:
+
+def circle_area(xc, yc, xp, yp):
+    radius = distance(xc, yc, xp, yp)
+    result = area(radius)
+    return result
+
+Variáveis temporárias como a radius e a result são úteis para desenvolvimento e depuração,
+uma vez que o programa esteja funcionando podemos torná-lo mais conciso compondo chamadas
+de função:
+
+def circle_area(xc, yc, xp, yp):
+    return area(distance(xc, yc, xp, yp))
+
+FUNÇÕES BOOLEANAS
+
 
 
 """
