@@ -305,6 +305,68 @@ def factorial(n):
         result = n * recurse
         return result
 
+O fluxo de execução deste programa é semelhante ao fluxo de countdown em “Recursividade”, 
+na página 81. Se chamarmos factorial com o valor 3:
+
+Como 3 não é 0, tomamos o segundo ramo e calculamos o fatorial de n-1…
+
+    Como 2 não é 0, tomamos o segundo ramo e calculamos o fatorial de n-1…
+
+        Como 1 não é 0, tomamos o segundo ramo e calculamos o fatorial de n-1…
+
+            Como 0 é igual a 0, tomamos o primeiro ramo e devolvemos 1 sem fazer mais chamadas recursivas.
+
+        O valor de retorno, 1, é multiplicado por n, que é 1, e o resultado é devolvido.
+
+    O valor de retorno, 1, é multiplicado por n, que é 2, e o resultado é devolvido.
+
+O valor devolvido (2) é multiplicado por n, que é 3, e o resultado, 6, torna-se o valor devolvido pela chamada de função que começou o processo inteiro.
+        
+SALTO DE FÉ
+
+Apesar de ser a forma mais comum de ler programas, seguir o fluxo de execução pode ser 
+trabalhoso demais, logo, mesmo que de forma inconsciente, usamos muito o chamado "leap of faith"
+ou salto de fé, é o princípio de que confiamos que uma parte do código funcione por "fé"
+em quem a programou, logo não precisamos ler o corpo desta parte do código, tomando como verdade
+que esta parte funciona, eliminando a necessidade de examinar e depurar partes muitas vezes
+complexas de código. O fato é que usamos isso quase sempre sem nem mesmo perceber, um exemplo
+é quando usamos funções integradas, nunca nos questionamos se "math.sqrt" funciona, confiamos
+que sim, sem examinar o corpo dessa função. Primeiro de tudo ao ler um programa e o examinar
+é confiar que o mesmo funcione como deveria, isso elimina grande parte do processo de leitura.
+
+O mesmo princípio de salto de fé pode ser aplicado à programas recursivos; Quando chega à
+chamada recursiva, em vez de só seguir o fluxo de execução, deve-se pressupor que a chamada
+funcione e devolva o resultado correto e só então perguntar-se: "Supondo que eu possa encontrar
+o fatorial de n - 1, posso calcular o fatorial de n?". Claro que pode, multiplicando por n.
+
+Pode ser um pouco esdrúxulo supor préviamente que uma função funcione corretamente quando
+sequer terminou de escrevê-la, mas é justamente por isso que se chama salto de fé!
+
+MAIS UM EXEMPLO
+
+Após o factorial, um exemplo tão comum quanto seria o Fibonacci, que tem a seguinte definição:
+
+fibonacci(0) = 0
+fibonacci(1) = 1
+fibonacci(n) = fibonacci(n - 1) + fibonacci(n - 2)
+
+Traduzindo para Python, Fibonacci pode ser avaliado da seguinte forma:
+
+def fibonacci (n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+Ao tentar seguir o fluxo de execução normalmente, mesmo com valores pequenos é visível que
+rápidamente as coisas complicam. Quando seguimos o salto de fé e supomos que as duas chamadas
+recursivas funcionam corretamente, é claro que vamos receber um resultado correto adicionando
+elas juntas.
+
+VERIFICAÇÃO DE TIPOS
+
 
 
 """
