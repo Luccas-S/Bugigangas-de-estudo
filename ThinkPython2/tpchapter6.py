@@ -367,6 +367,57 @@ elas juntas.
 
 VERIFICAÇÃO DE TIPOS
 
+Vejamos o que acontece se chamarmos factorial e usarmos 1.5 como argumento:
+
+>>> factorial(1.5)
+RuntimeError: Maximum recursion depth exceeded
+
+Parece que se trata de uma recursão infinita, mas, por que isso acontece? Veja bem, a função
+possuí um caso base quando n == 0. Vemos que neste caso n não é um número inteiro, logo perd-
+emos o caso-base e recorremos infinitamente, o Python previne isso com um limite de recursão.
+
+Quando temos a primeira chamada recursiva, o valor de n se torna 0.5, da segunda pra frente
+o número fica negativo(-0.5), e se torna cada vez menor, mas nunca chegará a 0.
+
+Temos então duas escolhas para resolver este problema, a primeira envolve generalizar a função
+para trabalhar com números de ponto flutuante, tratando-se de uma função gamma, o que está 
+além do escopo de Think Python 2.
+A segunda opção envolve controlar o tipo de argumento que a função recebe, podemos usar a
+função integrada isinstance para verificar o tipo de argumento. E vamos aproveitar para
+verificar também se o argumento é positivo:
+
+def factorial (n):
+    if not isinstance(n, int):
+        print('Factorial is only defined for integers.')
+        return None
+    elif n < 0:
+        print('Factorial is not defined for negative integers.')
+        return None
+    elif n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+Vemos que agora a função tem um caso-base que engloba números não inteiros e números inteiros
+negativos, em ambos os casos a função devolve uma mensagem de erro e retorna None, indicando
+que algo deu errado:
+
+>>> factorial('fred')
+Factorial is only defined for integers.
+None
+>>> factorial(-2)
+Factorial is not defined for negative integers.
+None
+
+Passando por ambas verificações saberemos que n é positivo ou zero, podendo comprovar que a 
+recursividade termina.
+
+Esse programa demonstra um padrão às vezes chamado de guardião. As duas primeiras condicionais
+atuam como guardiãs, protegendo o código que segue de valores que poderiam causar um erro.
+As guardiãs permitem comprovar a correção do código.
+
+DEPURAÇÃO
+
 
 
 """
