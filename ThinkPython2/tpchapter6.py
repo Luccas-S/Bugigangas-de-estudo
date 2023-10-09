@@ -207,6 +207,104 @@ def circle_area(xc, yc, xp, yp):
 
 FUNÇÕES BOOLEANAS
 
+O retorno de funções definidas pode ser booleano, isto é, verdadeiro ou falso, resultado este
+que será utilizado em outras partes do código, um uso interessante desse artifício é esconder
+testes complicados dentro de funções como no exemplo a seguir:
+
+def is_divisible(x, y):
+    if x % y == 0:
+        return True
+    else:
+        return False
+
+É comum e comodo dar nomes de perguntas para funções booleanas, isso permite uma compreensão
+direta do que a função faz e já da algum contexto para o tipo de retorno dessa função.
+
+>>> is_divisible(6, 4)
+False
+>>> is_divisible(6, 3)
+True
+
+O resultado do operador "==" é um booleano, logo podemos escrever a mesma função de forma
+mais concisa, retornando-o diretamente.
+
+def is_divisible(x, y):
+    return x % y == 0
+
+Frequentemente as funções booleanas são usadas em conjunto à instruções adicionais.
+
+if is_divisible(x, y):
+    print('x is divisible by y')
+
+Pode ser tentador escrever algo assim:
+
+if is_divisible(x, y) == True:
+    print('x is divisible by y')
+
+Porém, a comparação extra neste caso se mostra desnecessária.
+
+MAIS RECURSIVIDADE
+
+"Cobrimos apenas um pequeno subconjunto do Python, mas talvez seja bom você saber que este 
+subconjunto é uma linguagem de programação completa, ou seja, qualquer coisa que possa ser 
+calculada pode ser expressa nesta linguagem. 
+Qualquer programa que já foi escrito pode ser reescrito apenas com os recursos da linguagem 
+que você aprendeu até agora (na verdade, seria preciso alguns comandos para dispositivos de 
+controle como mouse, discos etc., mas isso é tudo).
+
+Comprovar esta declaração é um exercício nada trivial realizado pela primeira vez por Alan Turing
+, um dos primeiros cientistas da computação (alguns diriam que ele foi matemático, mas muitos 
+dos primeiros cientistas da computação começaram como matemáticos). Assim, é conhecida como a 
+Tese de Turing. Para uma exposição mais completa (e exata) da Tese de Turing, recomendo o 
+livro de Michael Sipser, Introduction to the Theory of Computation (Introdução à teoria da 
+computação, Course Technology, 2012).
+
+Para dar uma ideia do que podemos fazer com as ferramentas que aprendeu até agora, avaliaremos 
+algumas funções matemáticas definidas recursivamente. 
+Uma definição recursiva é semelhante a uma definição circular, no sentido de que a definição 
+contém uma referência à coisa que é definida. Uma definição realmente circular não é muito 
+útil:"
+
+-vorpal
+    Adjetivo usado para descrever algo que é vorpal.
+
+Ver uma definição realmente circular como essa num dicionário pode ser frustrante, enquanto
+que procurar a definição da função fatorial(representada pelo símbolo "!"), encontrará algo
+assim:
+
+0! = 1
+n! = n·(n - 1)!
+
+Na definição acima vemos que o fatorial de 0 é 1, e o fatorial de qualquer outro valor n será
+n multiplicado pelo fatorial de n - 1.
+
+"Então 3! é 3 vezes 2!, que é 2 vezes 1!, que é 1 vez 0!. Juntando tudo, 3! é igual a 3 
+vezes 2 vezes 1 vezes 1, que é 6."
+
+Quando você consegue escrever uma definição recursiva de qualquer coisa você então também pode
+a avaliar usando Python. O primeiro passo seria definir que parâmetros ela terá e neste caso
+fica claro que factorial deve receber um número inteiro:
+
+def factorial(n):
+
+Se o argumento for 0, tudo que precisamos fazer é retornar 1:
+
+def factorial(n):
+    if n == 0:
+        return 1
+
+Quando o argumento não é 0 que as coisas ficam interessantes, daí começamos a de fato avaliar
+a definição recursiva, no caso de um fatorial precisamos usar de uma chamada recursiva para
+encontrar o fatorial de n - 1 e então multiplicá-lo por n:
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        recurse = factorial(n-1)
+        result = n * recurse
+        return result
+
 
 
 """
