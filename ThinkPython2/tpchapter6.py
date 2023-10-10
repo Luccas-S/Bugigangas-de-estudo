@@ -475,6 +475,73 @@ depuração.
 
 EXERCÍCIOS
 
+Exercício 6.2
+
+def ack(m, n):
+    if m == 0:
+       return n + 1
+    elif m > 0 and n == 0:
+       return ack(m - 1, 1)
+    elif m > 0 and n > 0:
+       return ack(m - 1, ack(m, n - 1))
+
+avaliar = ack(3, 4)
+
+print(avaliar)
+
+No caso de usarmos números maiores que 3 e 4 nos parâmetros, vemos que acontece um erro de
+recursão, onde acontece recursão infinita por não atingirmos a condicional necessária a tempo,
+batendo o limite de profundidade recursiva.
+
+Exercício 6.3
+
+def first(word):
+    return word[0]
+def last(word):
+    return word[-1]
+def middle(word):
+    return word[1:-1]
+
+def is_palindrome(word):
+    if word == word[:: - 1]:
+        return True
+    else:
+        return False
+    
+print(is_palindrome("redividerr"))
+
+Exercício 6.4
 
 
+def is_power(a, b):
+    if a == b:
+        return True
+    elif a % b != 0:
+        return False
+    else:
+        return is_power(a/b, b)
+    
+print(is_power(9, 2))
+
+Exercício 6.5
+
+def gcd(a, b):
+    if not isinstance(a, int) or not isinstance(b, int):
+        print('GCD is only defined for integers.')
+        return None
+    elif a < 0 or b < 0:
+        print('GCD is not defined for negative integers')
+        return None
+    elif a > b:
+        r = a - b
+        gcd(b, r)
+    elif b > a:
+        r = b - a
+        gcd(a, r)
+    else:
+        print(a)
+
+
+gcd(252, 340)
 """
+
