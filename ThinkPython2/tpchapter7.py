@@ -53,6 +53,102 @@ leitura e depuração se tornará mais trabalhoso e mais difícil.
 
 ATUALIZAÇÃO DE VARIÁVEIS
 
+Um dos tipos mais comuns de reatribuição é a atualização, onde o novo valor
+da variável depende do antigo.
+
+>>> x = x + 1
+
+Esse código acima diz algo como "pegue o valor de x e adicione 1 a ele, 
+então atualize x com o novo valor".
+
+Caso tente atualizar uma variável não existente, o próprio Python devolverá
+um erro no console, já que o mesmo avalia o lado direito antes da atribuição
+de x:
+
+>>> x = x + 1
+NameError: name 'x' is not defined
+
+Antes de poder atualizar qualquer variável, é necessário a declarar/iniciali-
+zar, isto é feito com uma atribuição simples:
+
+>>> x = 0
+>>> x = x + 1
+
+Neste caso de atualização, adicionamos 1 ao valor original de X, essa
+atualização chama-se incremento, enquanto que subtrair 1 chama-se decremento.
+
+INSTRUÇÃO WHILE
+
+Computadores são excelentes em realizar tarefas repetitivas sem erros,
+podemos automatizar essas tarefas com facilidade usando a repetição, a
+repetição também é chamada de iteração. Até o momento desenvolvemos duas
+funções, "countdown" e "print_n", ambas usam repetição por meio de recursiv-
+idade. Repetições são bem comuns quando estamos programando, logo Python
+oferece recursos de linguagem para facilitar o uso de repetições; um deles
+é a instrução "for" que vimos préviamente, a que veremos aqui é a "while".
+
+Aqui está uma versão de countdown que usa while como método de repetição:
+
+def countdown(n):
+    while n > 0:
+        print(n)
+        n = n - 1
+    print('Blastoff!')
+
+Neste caso, a sintaxe é tão fácil de entender que quase podemos a ler como
+sua tradução do inglês, algo como "enquanto n for maior que 0, mostre o valor
+de n e entrão decremente dele. Quando chegar a 0, mostre a palavra "Blastoff!""
+
+Mais formalmente, aqui está o fluxo de execução para uma instrução while:
+
+1. Determine se a condição é verdadeira ou falsa.
+
+2. Se for falsa, saia da instrução while e continue a execução da próxima
+instrução.
+
+3. Se a condição for verdadeira, execute o corpo e então volte ao passo 1.
+
+Esse tipo de fluxo de repetição chama-se loop, já que o terceiro passo faz
+um loop de volta ao topo.
+
+Logo de cara podemos ver que fácilmente podemos quebrar essa repetição se
+escrevermos o corpo do while de forma a nenhuma variável mudar, logo, nenhuma
+condição é atingida e o loop continuará pra sempre; o corpo deve mudar o valor
+de uma ou mais variáveis para evitarmos que se repita infinitamente.
+
+Quando olhamos para countdown, podemos ver a prova de que o loop termina: se
+n for zero ou negativo, o loop nunca é executado, caso contrário n ficará
+cada vez menor até chegar a 0. Em alguns casos, não é tão fácil perceber isso.
+
+def sequence(n):
+    while n != 1:
+        print(n)
+        if n % 2 == 0:        # n é par
+            n = n / 2
+        else:                 # n é ímpar
+            n = n * 3 + 1
+
+A condição deste loop é "n != 1", enquanto n for diferente de 1 o loop cont-
+inuará até a condição se tornar falsa.
+
+Cada vez que passa pelo programa, será verificado se n é par ou impar, sendo
+par dividiremos n por 2, se for ímpar, substituiremos n por n * 3 + 1.
+Por exemplo, se o argumento passado a sequence for 3, os valores resultantes
+de n são 3, 10, 5, 16, 8, 4, 2, 1.
+
+Estamos trabalhando aqui com uma conjectura matemática, como n por vezes
+aumenta e outras diminui, não temos prova óbvia que n chegará eventualmente
+a 1, logo não conseguimos sempre provar que o loop terminará. Para alguns 
+valores de n, podemos provar o término. Por exemplo, se o valor inicial for 
+uma potência de dois, n será par cada vez que passar pelo loop até que chegue
+ a 1. O exemplo anterior termina com uma sequência assim, que inicia com 16.
+
+A questão difícil é se podemos provar que este programa termina para todos 
+os valores positivos de n. Por enquanto, ninguém foi capaz de comprovar ou 
+refutar isso!
+
+BREAK
+
 
 
 """
