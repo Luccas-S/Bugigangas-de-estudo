@@ -149,6 +149,20 @@ refutar isso!
 
 BREAK
 
+O recurso break pode ser muito útil, por vezes não se sabe que está na hora
+de terminar um loop até que já esteja na metade do corpo, justamente para isso
+o break serve, quebrando o fluxo da repetição e saindo da mesma.
+
+Suponha que você quer receber uma entrada do usuário até que este digite done.
+Você pode escrever:
+
+while True:
+    line = input('> ')
+    if line == 'done':
+        break
+    print(line)
+print('Done!')
+
 
 
 """
