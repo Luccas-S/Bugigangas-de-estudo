@@ -163,6 +163,25 @@ while True:
     print(line)
 print('Done!')
 
+No caso a condição do loop que criamos é True, ou seja, sempre será verdadeira
+até que chegue à instrução de interrupção, no caso o break.
+
+Cada vez que passa pelo loop, o programa apresenta ao usuário um colchete
+angular. Se o usuário digitar done, a instrução break sai do loop. Senão, o
+programa ecoa o que quer que o usuário digite e volta ao topo do loop. Aqui
+está uma amostra de execução do código acima:
+
+> not done
+not done
+> done
+Done!
+
+Essa é uma das formas mais comuns de escrever um loop while, já que podemos
+verificar a condição em qualquer lugar do loop e podemos exprimir a condição
+de parada afirmativamente ao invés de negativamente.
+
+RAIZES QUADRADAS
+
 
 
 """
