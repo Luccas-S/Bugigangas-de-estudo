@@ -182,6 +182,146 @@ de parada afirmativamente ao invés de negativamente.
 
 RAIZES QUADRADAS
 
+Percebemos que de maneira geral, usamos loops com condições numéricas para
+obter resultados também numéricos. Começamos com respostas aproximadas e 
+melhoramos essas respostar com cada iteração.
 
+Usaremos de exempo o cálculo de raízes quadradas usando o método de Newton.
+Suponha que você queira saber a raiz quadrada de a. Se começar com quase
+qualquer estimativa, x, é possível calcular uma estimativa melhor utilizando
+uma fórmula para tal(y =(x + a/x)/2)
+
+Por exemplo, se a for 4 e x for 3:
+>>> a = 4
+>>> x = 3
+>>> y = (x + a/x) / 2
+>>> y
+2.16666666667
+
+O resultado se torna mais e mais preciso com cada iteração do cálculo, usan-
+do a estimativa nova cada vez que calcular:
+
+>>> x = y
+>>> y = (x + a/x) / 2
+>>> y
+2.00641025641
+
+Após algumas iterações, a estimativa se torna próxima a exatidão:
+
+>>> x = y
+>>> y = (x + a/x) / 2
+>>> y
+2.00001024003
+
+
+>>> x = y
+>>> y = (x + a/x) / 2
+>>> y
+2.00000000003
+
+No geral não teremos uma dica de quantas iterações serão necessárias, mas
+sabemos quando chegamos lá, afinal ao chegar na exatidão, o resultado para
+de mudar.
+
+>>> x = y
+>>> y = (x + a/x) / 2
+>>> y
+2.0
+
+>>> x = y
+>>> y = (x + a/x) / 2
+>>> y
+2.0
+
+Quando y == x podemos parar as iterações, veja aqui um loop que começa com
+estimativa inicial x e a melhora até que deixe de mudar, exibindo no fim
+o número de iterações feitas para chegar à exatidão:
+
+while True:
+    count = 0 
+    count + 1
+    print(x)
+    y = (x + a/x) / 2
+    if y == x:
+        print('Number of iterations: '+count)
+        break
+    x = y
+
+Na maior parte dos casos esse loop funcionará bem, mas quando se trata de 
+números float teremos problemas. É difícil ter exatidão entre dois números
+de ponto flutuante, maioria dos números racionais como 1/3 e irracionais como
+a raiz de 2, não podem ser representados exatamente com um float.
+
+Nesses casos, ao invés de verificar se x e y são exatamente iguais, é mais
+seguro usar a função integrada abs, para calcular o valor absoluto ou magnitude
+da diferença entre eles:
+
+if abs(y-x) < epsilon:
+    break
+    
+Onde epsilon tem um valor como 0.0000001, que determina a proximidade desejada
+entre x e y.
+
+ALGORITMOS
+
+O método de Newton é um exemplo de um algoritmo: um processo mecânico para 
+resolver uma categoria de problemas (neste caso, calcular raízes quadradas).
+
+Para entender o que é um algoritmo, pode ser útil começar com algo que não 
+é um algoritmo. Quando aprendeu a multiplicar números de um dígito, você 
+provavelmente memorizou a tabuada. Ou seja, você memorizou 100 soluções 
+específicas. Este tipo de conhecimento não é algorítmico.
+
+No entanto, se você foi “preguiçoso”, poderia ter aprendido alguns truques. 
+Por exemplo, para encontrar o produto de n e 9, pode escrever n-1 como o 
+primeiro dígito e 10-n como o segundo dígito. Este truque é uma solução 
+geral para multiplicar qualquer número de dígito único por 9. Isto é um 
+algoritmo!
+
+De forma semelhante, as técnicas que aprendeu, como o transporte na adição, 
+o empréstimo na subtração e a divisão longa são todos algoritmos. Uma das 
+características de algoritmos é que eles não exigem inteligência para serem 
+executados. São processos mecânicos, nos quais cada passo segue a partir do 
+último, de acordo com um conjunto de regras simples.
+
+A execução de algoritmos é maçante, mas projetá-los é interessante, 
+intelectualmente desafiador e uma parte central da Ciência da Computação.
+
+Algumas coisas que as pessoas fazem naturalmente, sem dificuldade ou 
+pensamento consciente, são as mais difíceis para exprimir algoritmicamente. 
+A compreensão de linguagem natural é um bom exemplo. Todos nós o fazemos, 
+mas por enquanto ninguém foi capaz de explicar como o fazemos, pelo menos 
+não na forma de um algoritmo.
+
+DEPURAÇÃO
+
+Ao começar a escrever programas maiores, pode ser que você passe mais tempo 
+depurando. Mais código significa mais possibilidades fazer erros e mais 
+lugares para esconder defeitos.
+
+Uma forma de cortar o tempo de depuração é “depurar por bisseção”. Por 
+exemplo, se há 100 linhas no seu programa e você as verifica uma a uma, 
+seriam 100 passos a tomar.
+
+Em vez disso, tente quebrar o problema pela metade. Olhe para o meio do 
+programa, ou perto disso, para um valor intermediário que possa verificar. 
+Acrescente uma instrução print (ou outra coisa que tenha um efeito 
+verificável) e execute o programa.
+
+Se a verificação do ponto central for incorreta, deve haver um problema na 
+primeira metade do programa. Se for correta, o problema está na segunda
+metade.
+
+Cada vez que executar uma verificação assim, divida ao meio o número de 
+linhas a serem verificadas. Depois de seis passos (que é menos de 100), 
+você teria menos de uma ou duas linhas do código para verificar, pelo menos
+em teoria.
+
+Na prática, nem sempre é claro o que representa o “meio do programa” e nem 
+sempre é possível verificá-lo. Não faz sentido contar linhas e encontrar o 
+ponto central exato. Em vez disso, pense em lugares no programa onde poderia 
+haver erros e lugares onde é fácil inserir um ponto de verificação. Então 
+escolha um lugar onde as possibilidades são basicamente as mesmas de que o 
+defeito esteja antes ou depois da verificação.
 
 """
