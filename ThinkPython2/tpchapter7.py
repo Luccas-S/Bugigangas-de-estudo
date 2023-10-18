@@ -237,8 +237,8 @@ Quando y == x podemos parar as iterações, veja aqui um loop que começa com
 estimativa inicial x e a melhora até que deixe de mudar, exibindo no fim
 o número de iterações feitas para chegar à exatidão:
 
+count = 0
 while True:
-    count = 0 
     count + 1
     print(x)
     y = (x + a/x) / 2
@@ -324,4 +324,33 @@ haver erros e lugares onde é fácil inserir um ponto de verificação. Então
 escolha um lugar onde as possibilidades são basicamente as mesmas de que o 
 defeito esteja antes ou depois da verificação.
 
+EXERCÍCIOS
+
+Exercício 7.1
+
+def mysqrt(a):
+    x = int(input("Qual a estimativa inicial?"))
+    count = 0
+    while True:
+        count = count + 1
+        print(x)
+        y = (x + a/x) / 2
+        if y == x:
+            print('Number of iterations: ',count)
+            break
+        x = y
+
+mysqrt(9)
+
+Exercício 7.2
 """
+import math
+def eval_loop():
+    while True:
+        a = input("Digite uma expressão para avaliar ou 'Done' para encerrar: ")
+        eval(str(a))
+        if a == "Done":
+            break
+
+eval_loop()
+            
