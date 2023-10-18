@@ -339,18 +339,24 @@ def mysqrt(a):
             print('Number of iterations: ',count)
             break
         x = y
-
 mysqrt(9)
 
 Exercício 7.2
-"""
+
 import math
 def eval_loop():
+    Done = "Done"
     while True:
         a = input("Digite uma expressão para avaliar ou 'Done' para encerrar: ")
-        eval(str(a))
-        if a == "Done":
+        print(eval(a))
+        if a == Done:
             break
-
 eval_loop()
+
+Exercício 7.3
+"""
+
+
+            
+
             
