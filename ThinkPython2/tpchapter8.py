@@ -99,5 +99,80 @@ while index < len(fruit):
     print(letter)
     index = index + 1
 
+No caso desse loop temos a variável index que usaremos não só como o índice
+que indicará qual letra mostraremos mas também como a condição do loop. A
+condição é index<len(fruit), logo, quando index chegar ao final dos carac-
+teres de fruit, o loop será interrompido e o último caractere mostrado será
+o que tem índice len(fruit)-1.
+
+Outra forma que podemos fazer a mesma coisa é a seguinte:
+
+for letter in fruit:
+    print(letter)
+
+Neste caso sempre que o programa executar o loop o caractere seguinte na
+string é atribuído à variável letter; O loop continuará até que não sobrem
+caracteres.
+
+No próximo exemplo temos o uso de concatenção e loop para fazer uma série
+abecedária. No caso usaremos os nomes Jack, Kack, Lack, Mack, Nack, Ouack,
+Pack e Quack. O loop produzirá os nomes em ordem:
+
+prefixes = 'JKLMNOPQ'
+suffix = 'ack'
+for letter in prefixes:
+    print(letter + suffix)
+A saída é:
+Jack
+Kack
+Lack
+Mack
+Nack
+Oack
+Pack
+Qack
+
+Nesse caso é visivel que não ficou exatamente como deveria ser ja que "Ouack"
+e "Quack" foram mal soletrados.
+
+FATIAMENTO DE STRINGS
+
+Segmentos de string são chamados de fatia, podemos selecionar elas da mesma
+forma que selecionamos caracteres:
+
+>>> s = 'Monty Python'
+>>> s[0:5]
+'Monty'
+>>> s[6:12]
+'Python'
+
+O operador [n:m] retorna a parte da string do “enésimo” caractere ao 
+“emésimo” caractere, incluindo o primeiro, mas excluindo o último. 
+Este comportamento é contraintuitivo, porém pode ajudar a imaginar os 
+índices que indicam a parte entre os caracteres.
+
+Se você omitir qualquer um dos elementos do operador, o mesmo vai proceder de
+acordo com qual elemento foi omitido; caso o primeiro seja omitido, a fatia
+começará do começo da string, se o segundo for omitido, a fatia procederá
+até o fim da string.
+
+>>> fruit = 'banana'
+>>> fruit[:3]
+'ban'
+>>> fruit[3:]
+'ana'
+
+Caso o primeiro elemento(índice) seja maior ou igual ao segundo, teremos uma
+string vazia, representada por duas aspas:
+
+>>> fruit = 'banana'
+>>> fruit[3:3]
+''
+
+Uma string vazia não contém nenhum caractere e tem comprimento 0, fora isso
+é igual a qualquer outra string.
+
+STRINGS SÃO IMUTÁVEIS
+
 
 """
