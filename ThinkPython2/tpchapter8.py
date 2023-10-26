@@ -174,5 +174,40 @@ Uma string vazia não contém nenhum caractere e tem comprimento 0, fora isso
 
 STRINGS SÃO IMUTÁVEIS
 
+Vendo a forma como usamos o operador "[]" até agora, se torna interessante a
+ideia de usa-lo para atribuir um caractere diferente em uma string que já
+possuí atribuição prévia.
 
+>>> greeting = 'Hello, world!'
+>>> greeting[0] = 'J'
+TypeError: 'str' object does not support item assignment
+
+Vemos um erro que diz que o objeto(nesse caso a string) não dá suporte a
+adição de novos itens(no caso a letra 'J'). Até agora, valores e objetos
+não tem inata diferença, además, refinaremos o conceito em breve.
+
+O motivo da tentativa retornar erro é que strings são imutáveis, não podemos
+mudar uma string que ja foi declarada, o máximo que poderiamos fazer aqui
+seria criar uma variação da primeira string em outra variável.
+
+>>> greeting = 'Hello, world!'
+>>> new_greeting = 'J' + greeting[1:]
+>>> new_greeting
+'Jello, world!'
+
+Apesar de não termos afetado a string original, agora temos uma versão dife-
+rente que atende o que queriamos fazer, colocando uma letra nova numa fatia
+de 'greeting'.
+
+BUSCANDO
+
+O que faz a seguinte função?
+
+def find(word, letter):
+    index = 0
+    while index < len(word):
+        if word[index] == letter:
+            return index
+        index = index + 1
+    return-1
 """
