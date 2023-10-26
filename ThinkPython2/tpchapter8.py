@@ -210,4 +210,15 @@ def find(word, letter):
             return index
         index = index + 1
     return-1
+
+Nessa função vemos algo que é o oposto completo do operador '[]', ao contrá-
+rio do mesmo, 'find' toma um caractere e encontra o índice onde o caractere
+aparece; Caso o caractere esperado não for encontrado, a função retorna -1.
+
+Aqui também vemos o primeiro exemplo de uma instrução return dentro de um
+loop, se a condição dada for verdadeira, a função sai do loop e retorna na
+hora. Se o caractere não aparece, o programa sai do loop e devolve -1.
+
+O modelo de cálculo usado aqui chama-se busca, atravessamos uma sequência e
+retornamos quando encontramos o que estamos procurando
 """
