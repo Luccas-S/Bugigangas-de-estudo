@@ -220,5 +220,205 @@ loop, se a condição dada for verdadeira, a função sai do loop e retorna na
 hora. Se o caractere não aparece, o programa sai do loop e devolve -1.
 
 O modelo de cálculo usado aqui chama-se busca, atravessamos uma sequência e
-retornamos quando encontramos o que estamos procurando
+retornamos quando encontramos o que estamos procurando.
+
+LOOP E CONTAGEM
+
+No exemplo a seguir o programa conta o número de vezes que um caractere
+aparece numa string:
+
+word = 'banana'
+count = 0
+for letter in word:
+    if letter == 'a':
+        count = count + 1
+print(count)
+
+Este programa demonstra outro padrão de computação chamado contador. 
+A variável count é inicializada com 0 e então incrementada cada vez que um 
+a é encontrado. Ao sair do loop, count contém o resultado – o número total 
+de letras 'a'.
+
+MÉTODOS DE STRINGS
+
+As strings oferecem métodos que executam várias operações úteis. Um método 
+é semelhante a uma função – toma argumentos e devolve um valor –, mas a 
+sintaxe é diferente. Por exemplo, o método upper recebe uma string e 
+devolve uma nova string com todas as letras maiúsculas.
+
+Em vez da sintaxe de função upper(word), ela usa a sintaxe de método 
+word.upper():
+
+>>> word = 'banana'
+>>> new_word = word.upper()
+>>> new_word
+'BANANA'
+
+Esta forma de notação de ponto especifica o nome do método, upper e o nome 
+da string, word, à qual o método será aplicado. Os parênteses vazios indicam 
+que este método não toma nenhum argumento.
+
+Uma chamada de método denomina-se invocação; neste caso, diríamos que 
+estamos invocando upper em word.
+
+E, na verdade, há um método de string denominado find, que é notavelmente 
+semelhante à função que escrevemos:
+
+>>> word = 'banana'
+>>> index = word.find('a')
+>>> index
+1
+
+Neste exemplo, invocamos find em word e passamos a letra que estamos 
+procurando como um parâmetro. Na verdade, o método find é mais geral que a 
+nossa função; ele pode encontrar substrings, não apenas caracteres:
+
+>>> word.find('na')
+2
+
+Por padrão, find inicia no começo da string, mas pode receber um segundo 
+argumento, o índice onde deve começar:
+
+>>> word.find('na', 3)
+4
+
+Este é um exemplo de um argumento opcional. find também pode receber um 
+terceiro argumento, o índice para onde deve parar:
+
+>>> name = 'bob'
+>>> name.find('b', 1, 2)
+
+-1
+Esta busca falha porque 'b' não aparece no intervalo do índice de 1 a 2, 
+não incluindo 2. Fazer buscas até (mas não incluindo) o segundo índice 
+torna find similar ao operador de fatiamento.
+
+OPERADOR IN
+
+A palavra in é um operador booleano que recebe duas strings e retorna True 
+se a primeira aparecer como uma substring da segunda:
+
+>>> 'a' in 'banana'
+True
+>>> 'seed' in 'banana'
+False
+
+Por exemplo, a seguinte função imprime todas as letras de word1 que também 
+aparecem em word2:
+
+def in_both(word1, word2):
+    for letter in word1:
+        if letter in word2:
+            print(letter)
+
+Com nomes de variáveis bem escolhidos, o Python às vezes pode ser lido como 
+um texto em inglês. Você pode ler este loop, “para (cada) letra em 
+(a primeira) palavra, se (a) letra (aparecer) em (a segunda) palavra, exiba 
+(a) letra”.
+
+Veja o que é apresentado ao se comparar maçãs e laranjas:
+
+>>> in_both('apples', 'oranges')
+a
+e
+s
+
+COMPARAÇÃO DE STRINGS
+
+Os operadores relacionais funcionam em strings. Para ver se duas strings 
+são iguais:
+
+if word == 'banana':
+    print('All right, bananas.')
+
+Outras operações relacionais são úteis para colocar palavras em ordem 
+alfabética:
+
+if word < 'banana':
+    print('Your word, ' + word + ', comes before banana.')
+elif word > 'banana':
+    print('Your word, ' + word + ', comes after banana.')
+else:
+    print('All right, bananas.')
+
+O Python não lida com letras maiúsculas e minúsculas do mesmo jeito que as 
+pessoas. Todas as letras maiúsculas vêm antes de todas as letras minúsculas,
+portanto:
+
+Your word, Pineapple, comes before banana.
+Uma forma comum de lidar com este problema é converter strings em um 
+formato padrão, como letras minúsculas, antes de executar a comparação. 
+Lembre-se disso caso tenha que se defender de um homem armado com um abacaxi.
+
+DEPURAÇÃO
+
+Ao usar índices para atravessar os valores em uma sequência, é complicado 
+acertar o começo e o fim da travessia. Aqui está uma função que supostamente
+compara duas palavras e retorna True se uma das palavras for o reverso da 
+outra, mas contém dois erros:
+
+def is_reverse(word1, word2):
+    if len(word1) != len(word2):
+        return False
+    i = 0
+    j = len(word2)
+    while j > 0:
+        if word1[i] != word2[j]:
+            return False
+        i = i+1
+        j = j-1
+    return True
+
+A primeira instrução if verifica se as palavras têm o mesmo comprimento. Se 
+não for o caso, podemos retornar False imediatamente. Do contrário, para o 
+resto da função, podemos supor que as palavras tenham o mesmo comprimento.
+
+i e j são índices: i atravessa word1 para a frente, enquanto j atravessa 
+word2 para trás. Se encontrarmos duas letras que não combinam, podemos 
+retornar False imediatamente. Se terminarmos o loop inteiro e todas as 
+letras corresponderem, retornamos True.
+
+Se testarmos esta função com as palavras “pots” e “stop”, esperamos o valor 
+de retorno True, mas recebemos um IndexError:
+
+>>> is_reverse('pots', 'stop')
+...
+  File "reverse.py", line 15, in is_reverse
+    if word1[i] != word2[j]:
+IndexError: string index out of range
+
+Para depurar este tipo de erro, minha primeira ação é exibir os valores dos índices imediatamente antes da linha onde o erro aparece.
+
+while j > 0:
+    print(i, j)        # exibir aqui
+    if word1[i] != word2[j]:
+        return False
+    i = i+1
+    j = j-1
+Agora quando executo o programa novamente, recebo mais informação:
+
+>>> is_reverse('pots', 'stop')
+0 4
+...
+IndexError: string index out of range
+
+Na primeira vez que o programa passar pelo loop, o valor de j é 4, que está 
+fora do intervalo da string ‘pots’. O índice do último caractere é 3, então 
+o valor inicial de j deve ser len(word2)-1.
+
+Se corrigir esse erro e executar o programa novamente, recebo:
+
+>>> is_reverse('pots', 'stop')
+0 3
+1 2
+2 1
+True
+
+Desta vez, recebemos a resposta certa, mas parece que o loop só foi 
+executado três vezes, o que é suspeito. Para ter uma ideia melhor do que 
+está acontecendo, é útil desenhar um diagrama de estado.
+
+EXERCÍCIOS
+
+
 """
