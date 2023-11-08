@@ -420,5 +420,11 @@ está acontecendo, é útil desenhar um diagrama de estado.
 
 EXERCÍCIOS
 
+Exercício 8.2
+
+fruit = 'banana'
+letter = fruit.count('a')
+print(letter)
+
 
 """
