@@ -52,4 +52,8 @@ for line in fin:
     word = line.strip()
     if len(word) > 19
         print(word)
+
+Exercício 9.2
+
+
 """
