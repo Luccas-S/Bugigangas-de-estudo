@@ -426,5 +426,79 @@ fruit = 'banana'
 letter = fruit.count('a')
 print(letter)
 
+Exercício 8.3
 
+def is_palindrome(word):
+	if word == word[::-1]
+        return word == word[::-1]
+        print('É um palíndromo.')
+    else
+        return word == word[::-1]
+        print('Não é um palíndromo.')
+
+
+	
+print is_palindrome("redivider")
+print is_palindrome("apple")
+
+Exercício 8.4
+
+#O parâmetro é uma string.
+
+#Checa se todos os caracteres de S são caixa baixa, retornando um 
+valor booleano.
+def any_lowercase1(s):
+	for c in s:
+		if c.islower():
+			return True 
+		else:	
+			return False
+			
+#Sempre retornará verdadeiro já que 'c' é caixa baixa não importa a string
+colocada.
+def any_lowercase2(s):
+	for c in s:
+		if 'c'.islower():  
+			return 'True'
+		else:
+			return 'False'
+			
+#Checa se o último caractere é caixa baixa, retornando um valor booleano.
+def any_lowercase3(s):
+	for c in s:
+		flag = c.islower() 
+	return flag
+	
+#Checa se o último caractere é caixa baixa, retornando um valor booleano.
+def any_lowercase4(s):
+	flag = False
+	for c in s:
+		flag = flag or c.islower() 
+	return flag
+	
+#Checa todos os caracteres, retorna um valor booleano falso se não 
+forem todos caixa baixa.
+def any_lowercase5(s):
+	for c in s:
+		if not c.islower():
+			return False 
+	return True
+
+Exercício 8.5
+
+def rotate_word(s, n):
+	s_c = "" 
+	i = 0 
+	for c in s:
+		if ord(c) >= ord('A') and ord(c) <= ord('Z'):
+			i = (ord(c) - ord('A') + n ) % 26 + ord('A') 
+		elif ord(c) >= ord('a') and ord(c) <= ord('z'):
+			i = (ord(c) - ord('a') + n ) % 26 + ord('a')
+		else:
+			i = ord(c)
+		s_c +=  chr(i)
+	return s_c
+	
+print (rotate_word("apple+apple", 3))
+print (rotate_word("APPLE", 3))
 """
