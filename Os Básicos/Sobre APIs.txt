@@ -1,0 +1,55 @@
+Nesse texto estarei estudando a respeito de 
+APIs(Application Programming Interface), API Rest e afins na área
+de TI(Tecnologia da Informação).
+
+Meu entendimento sobre APIs é que são padrões de interfaces programáveis 
+que facilitam a criação de plataformas, essas sendo aplicativos,
+complementos, scripts e webhooks.
+Esses padrões estão presentes em diversos lugares, um exemplo simples são
+apps feitos para android que utilizam padrões do sistema operacional. Isso
+se extende para outras plataformas, existem APIs para grandes sites como
+o Twitter/X usadas para criar scripts e aplicações que complementam a
+experiência de uso do mesmo, é uma relação majoritáriamente cooperativa.
+
+Da mesma forma que drivers permitem que softwares usem subsistemas de 
+hardware sem precisar saber de cada detalhe operacional do mesmo, APIs
+desempenham funções parecidas, usando funcionalidades do PC(Personal Computer) 
+e do sistema operacional sem necessáriamente precisar acompanhar todos 
+os detalhes de operação da CPU(Central Processing Unit) ou 
+da plataforma usada.
+
+A seguir, um exemplo de funcionalidades escrito por Curt Franklin e
+Chris Pollette no site HowStuffWorks e traduzido por mim:
+
+"Vamos ver um exemplo de criar um arquivo num HDD(Hard Disk Drive) para
+vermos o porquê isso pode ser importante.
+
+Um programador escrevendo uma aplicação para armazenar dados de um
+instrumento cientifico pode querer permitir o cientista de especificar
+o nome do arquivo criado. O sistema operacional pode prover uma função
+API chamada "MakeFile" para criar arquivos. Enquanto escreve o programa, o 
+desenvolvedor usaria uma linha que se parece com isso:
+
+MakeFile[1, %Name,2]
+
+Nesse exemplo, a instrução diz ao sistema operacional para criar um arquivo
+que permitirá acesso aleatório de seus dados(sinalizado pelo 1 - a outra
+opção poderia ser 0 para um arquivo serial(Um tipo de arquivo sequêncial
+que consiste de multiplos armazenamentos de dados com o mesmo espaço na 
+memória.)), terá um nome digitado pelo usuário(%Name) e ocupará um espaço
+variável dependendo de quantos dados estão guardados no arquivo(Indicado 
+pelo 2 - outras opções podem ser 0 para um tamanho fixo, e 1 para um
+tipo de arquivo que usa mais espaço quanto mais dados são adicionados mas
+não usa menos espaço quando esses dados são removidos). Agora, vejamos o que
+o sistema operacional faz para transformar essa instrução em ação.
+
+O sistema operacional manda uma instrução para o HDD para identificar a
+localização do primeiro espaço livre de armazenamento.
+
+Com essa informação, o sistema operacional cria uma entrada no sistema de
+arquivos mostrando a localização inicial e final do mesmo arquivo, o nome,
+o tipo de arquivo, se o arquivo foi armazenado, que usuários tem permissão
+de olhar ou modificar o arquivo e por fim a data e horário de criação do
+arquivo."
+
+
