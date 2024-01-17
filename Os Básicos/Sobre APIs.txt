@@ -47,9 +47,28 @@ O sistema operacional manda uma instrução para o HDD para identificar a
 localização do primeiro espaço livre de armazenamento.
 
 Com essa informação, o sistema operacional cria uma entrada no sistema de
-arquivos mostrando a localização inicial e final do mesmo arquivo, o nome,
+arquivos mostrando a locação inicial e final do mesmo arquivo, o nome,
 o tipo de arquivo, se o arquivo foi armazenado, que usuários tem permissão
 de olhar ou modificar o arquivo e por fim a data e horário de criação do
 arquivo."
 
+O uso da API para armazenamento em disco torna o trabalho do programador mais
+simples e dinâmico, a necessidade de acompanhar instruções, códigos responsivos
+e tipagem de dados é nulificada, deixando o desenvolvedor com mais tempo para
+outras tarefas. Uma parte do trabalho é delegada ao sistema operacional, o 
+mesmo conectado a diversas subrotinas do hardware vai lidar com os detalhes
+operacionais e detalhes repentinos do hardware. O programador passa a precisar
+apenas escrever seu código na API e o sistema operacional cuidará do resto.
 
+Mesmo com essas vantagens, é necessário ressaltar que o acesso aos softwares
+que APIs oferecem pode ser uma fraqueza de segurança e pode oferecer vantagem
+para hackers usarem a aplicação por benefício próprio ou até ganhar acesso
+a computadores pessoais de terceiros. De toda forma, isso não quer dizer que
+o uso de APIs é ruim, ele mantém sua utilidade mas ao mesmo tempo devemos
+enfatizar a necessidade de identificar vulnerabilidades e corrigir elas
+conforme forem detectadas.
+
+Vemos que APIs se tornaram um pilar da programação e desenvolvimento moderno,
+a industria percebeu e adotou seu potencial nos ultimos anos, tornando APIs
+em uma das áreas mais competitivas e contestadas da história dos computadores
+e da internet. 
