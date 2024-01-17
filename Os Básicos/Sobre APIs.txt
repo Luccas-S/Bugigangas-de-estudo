@@ -2,14 +2,15 @@ Nesse texto estarei estudando a respeito de
 APIs(Application Programming Interface), API Rest e afins na área
 de TI(Tecnologia da Informação).
 
-Meu entendimento sobre APIs é que são padrões de interfaces programáveis 
-que facilitam a criação de plataformas, essas sendo aplicativos,
-complementos, scripts e webhooks.
+APIs são padrões de interfaces programáveis que facilitam a criação de 
+plataformas, essas sendo aplicativos, complementos, scripts e webhooks.
 Esses padrões estão presentes em diversos lugares, um exemplo simples são
 apps feitos para android que utilizam padrões do sistema operacional. Isso
 se extende para outras plataformas, existem APIs para grandes sites como
 o Twitter/X usadas para criar scripts e aplicações que complementam a
-experiência de uso do mesmo, é uma relação majoritáriamente cooperativa.
+experiência de uso do mesmo, é uma relação majoritáriamente cooperativa
+apesar de suas nuances e termos relacionados a pagamento de royalties e 
+tokens.
 
 Da mesma forma que drivers permitem que softwares usem subsistemas de 
 hardware sem precisar saber de cada detalhe operacional do mesmo, APIs
@@ -17,6 +18,14 @@ desempenham funções parecidas, usando funcionalidades do PC(Personal Computer)
 e do sistema operacional sem necessáriamente precisar acompanhar todos 
 os detalhes de operação da CPU(Central Processing Unit) ou 
 da plataforma usada.
+
+APIs são conjuntos de padrões e normas a seguir para comunicação com sistemas 
+diversos, podemos compreender como aplicação programável à interfaces. Através
+delas podemos criar aplicações e extensões para aplicativos já existentes 
+economizando o tempo de os desenvolver do zero, já que com elas ja temos
+estruturas prontas para uso. A função principal de APIs é facilitar o trabalho
+de programadores com economia de tempo, já que corta a necessidade de criar
+códigos personalizados para cada função do aplicativo que criam.
 
 A seguir, um exemplo de funcionalidades escrito por Curt Franklin e
 Chris Pollette no site HowStuffWorks e traduzido por mim:
@@ -66,7 +75,10 @@ para hackers usarem a aplicação por benefício próprio ou até ganhar acesso
 a computadores pessoais de terceiros. De toda forma, isso não quer dizer que
 o uso de APIs é ruim, ele mantém sua utilidade mas ao mesmo tempo devemos
 enfatizar a necessidade de identificar vulnerabilidades e corrigir elas
-conforme forem detectadas.
+conforme forem detectadas. Da mesma forma que são inerentemente vulneráveis,
+APIs de forma contraditória também são poderosas ferramentas para a segurança
+digital, já que as mesmas podem bloquear acesso e permissões à dados de
+softwares importantes e hardwares essenciais.
 
 Vemos que APIs se tornaram um pilar da programação e desenvolvimento moderno,
 a industria percebeu e adotou seu potencial nos ultimos anos, tornando APIs
