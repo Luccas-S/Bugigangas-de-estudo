@@ -71,4 +71,10 @@ conforme forem detectadas.
 Vemos que APIs se tornaram um pilar da programação e desenvolvimento moderno,
 a industria percebeu e adotou seu potencial nos ultimos anos, tornando APIs
 em uma das áreas mais competitivas e contestadas da história dos computadores
-e da internet. 
+e da internet. Empresas notaram a capacidade de controlar e lucrar dessa
+parte da industria que os desenvolvedores tem usando suas APIs; Ao prover
+aplicações gratuitas, os desenvolvedores esperam um maior uso de seus
+softwares por parte do publico, ainda que esperem que outros desenvolvedores
+paguem royalties para poder usar seus softwares com intuito de criar
+ferramentas uteis para os usuários, enquanto outros disponibilizam suas APIs
+livremente.
