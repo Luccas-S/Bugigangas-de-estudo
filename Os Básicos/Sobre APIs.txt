@@ -28,7 +28,7 @@ de programadores com economia de tempo, já que corta a necessidade de criar
 códigos personalizados para cada função do aplicativo que criam.
 
 A seguir, um exemplo de funcionalidades escrito por Curt Franklin e
-Chris Pollette no site HowStuffWorks e traduzido por mim:
+Chris Pollette no site www.howstuffworks.com e traduzido por mim:
 
 "Vamos ver um exemplo de criar um arquivo num HDD(Hard Disk Drive) para
 vermos o porquê isso pode ser importante.
@@ -79,6 +79,33 @@ conforme forem detectadas. Da mesma forma que são inerentemente vulneráveis,
 APIs de forma contraditória também são poderosas ferramentas para a segurança
 digital, já que as mesmas podem bloquear acesso e permissões à dados de
 softwares importantes e hardwares essenciais.
+
+Existem essencialmente quatro tipos de APIs que são definidos pelas suas
+políticas de compartilhamento e uso. A seguir quatro definições dos tipos
+de API a partir dessas políticas descritas pelo blog do site www.syndle.com:
+
+1. APIs públicas ou abertas
+As APIs públicas são também conhecidas como APIs abertas e estão disponíveis 
+para outros usuários ou programadores utilizarem com restrições mínimas ou, 
+em alguns casos, de forma totalmente acessível.
+
+2. APIs privadas ou internas
+As APIs privadas ou internas são ocultadas aos usuários externos e são 
+expostas apenas para os sistemas internos de uma organização. São utilizadas
+para o desenvolvimento interno da empresa, otimizando a produtividade e a 
+reutilização dos serviços.
+
+3. APIs de parceiros de negócio
+As APIs de parceiros comerciais são aquelas que são expostas entre os 
+membros de um acordo comercial. Uma vez que não estão disponíveis para 
+todos, é necessária uma autorização especial para sua utilização.
+
+4. APIs compostas
+As APIs compostas utilizam diferentes dados ou APIs de serviços e permitem 
+aos programadores acessar múltiplos pontos finais.
+
+
+
 
 Vemos que APIs se tornaram um pilar da programação e desenvolvimento moderno,
 a industria percebeu e adotou seu potencial nos ultimos anos, tornando APIs
