@@ -177,9 +177,82 @@ Nessa linguagem de consulta de API, o cliente pode solicitar dados mais
 detalhadamente e auxilia na adição de informação através de simplicidade
 por meio de diversas fontes.
 
-Entraremos mais a fundo em APIs do protocolo REST abaixo.
+Entraremos mais a fundo em APIs do protocolo REST abaixo usando os textos
+explicativos do blog do site da IBM www.ibm.com:
 
+"Uma API de REST é uma API que se adéqua aos princípios de design do REST ou 
+o estilo de arquitetura do Representational State Transfer.  Por esta razão, 
+as APIs de REST são muitas vezes chamadas de APIs de RESTful.
+Definido pela primeira em 2000 pelo cientista de computação Dr. Roy Fielding 
+em sua dissertação de doutorado, o REST proporciona um nível relativamente 
+alto de flexibilidade e liberdade para desenvolvedores. Essa flexibilidade 
+é apenas uma razão pela qual as APIs de REST surgiram como um método comum 
+para conectar componentes e aplicativos em uma arquitetura de microsserviços.
 
+Basicamente, uma API é um mecanismo que permite que um aplicativo ou serviço 
+acesse um recurso dentro de outro aplicativo ou serviço. O aplicativo ou 
+serviço que está realizando o acesso é chamado de cliente, e o aplicativo 
+ou serviço contendo o recurso é chamado de servidor.
+
+Algumas APIs, como SOAP ou XML-RPC, impõe um framework restrito para os 
+desenvolvedores. Porém, as APIs de REST podem ser desenvolvidas usando 
+praticamente qualquer linguagem de programação e oferecem suporte a uma 
+variedade de formatos de dados. O único requisito é que eles devem alinhar 
+aos seis princípios de design de REST a seguir, conhecidos como restrições 
+de arquitetura:
+
+1. Interface uniforme. Todas as solicitações da API para o mesmo recurso devem 
+ser iguais, não importa a origem da solicitação. A API de REST deve garantir 
+que a mesma parte dos dados dados, como o nome ou endereço de e-mail de um 
+usuário, pertença a apenas um identificador de recurso uniforme (URI). 
+Os recursos não devem ser muito grandes mas devem conter todas as 
+informações que o cliente pode precisar.
+
+2. Desacoplamento do cliente-servidor. No projeto da API de REST, os 
+aplicativos cliente e servidor devem ser completamente independentes um do 
+outro. A única informação que o aplicativo cliente deve receber é o URI do 
+recurso solicitado. Ele não pode interagir com o aplicativo do servidor de 
+qualquer outra forma. Da mesma forma, um aplicativo do servidor não deve 
+modificar o aplicativo cliente, exceto para transferi-los aos dados 
+solicitados via HTTP.
+
+3. Sem estado definido. As APIs de REST não possuem estado definido, o que 
+significa que cada solicitação precisa incluir todas as informações 
+necessárias para processá-lo. Em outras palavras, as APIs de REST não 
+requerem nenhuma sessão do lado do servidor. Os aplicativos do servidor não 
+tem permissão para armazenar nenhum dado relacionado a uma solicitação de 
+cliente.
+
+4. Capacidade de armazenamento em cache. Quando possível, os recursos devem 
+ser armazenados em cache pelo cliente ou servidor. As respostas do servidor 
+também precisam conter informações sobre as permissões de cache do recurso 
+fornecido. O objetivo é melhorar o desempenho do cliente, além de aumentar 
+a escalabilidade do servidor.
+
+5. Arquitetura de sistema em camadas. Em APIs de REST, as chamadas e 
+respostas passam por diferentes camadas. De maneira geral, não assuma que 
+os aplicativos cliente e servidor se conectem diretamente um ao outro. Pode 
+haver uma série de intermediários diferentes no loop de comunicação. As APIs 
+de REST precisam ser projetadas para que nem o cliente e nem o servidor 
+possam dizer se ele se comunica com o aplicativo final ou um intermediário.
+
+6. Código sob demanda (opcional). As APIs de REST geralmente enviam recursos 
+estáticos, mas em certos casos, as respostas também podem conter código 
+executável (como applets Java). Nestes casos, o código deve ser executado 
+somente sob demanda."
+
+APIs de REST funcionam se comunicando usando solicitações em HTTP para
+executar funções de banco de dados, funções essas chamadas de CRUD, no caso
+são as funções Criar, Ler, Atualizar e Excluir em um recurso. Uma API de REST
+poderia usar as instruções de banco de dados através de solicitações em HTTP 
+para atingir seu objetivo, como uma solicitação GET para recuperar um 
+registro, POST para criar um registro, PUT para atualizar um registro e 
+DELETE para excluir um registro. Esses métodos HTTP podem ser usados em
+chamadas de API.
+
+A representação de recursos como data, hora, estado do recurso e afins podem
+ser entreguer a um cliente em quase qualquer formato, esses sendo JavaScript
+Object Notation(JSON), HTML, XLT, Python, PHP ou texto simples
 
 Vemos que APIs se tornaram um pilar da programação e desenvolvimento moderno,
 a industria percebeu e adotou seu potencial nos ultimos anos, tornando APIs
