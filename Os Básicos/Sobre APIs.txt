@@ -252,7 +252,15 @@ chamadas de API.
 
 A representação de recursos como data, hora, estado do recurso e afins podem
 ser entreguer a um cliente em quase qualquer formato, esses sendo JavaScript
-Object Notation(JSON), HTML, XLT, Python, PHP ou texto simples
+Object Notation(JSON), HTML, XLT, Python, PHP ou texto simples. Nesse caso
+o JSON é o mais usado por ser legível por pessoas e máquinas.
+
+Os cabeçalhos e parâmetros de solicitação também são importantes em chamadas 
+de API de REST, porque incluem informações importantes do identificador como 
+metadados, autorizações, identificadores de recursos uniformes (URIs), 
+armazenamento em cache, cookies e mais. Os cabeçalhos de solicitação e 
+cabeçalhos de resposta, juntamente aos códigos de status HTTP convencionais, 
+são usados dentro de APIs de REST bem projetadas.
 
 Vemos que APIs se tornaram um pilar da programação e desenvolvimento moderno,
 a industria percebeu e adotou seu potencial nos ultimos anos, tornando APIs
