@@ -104,6 +104,80 @@ todos, é necessária uma autorização especial para sua utilização.
 As APIs compostas utilizam diferentes dados ou APIs de serviços e permitem 
 aos programadores acessar múltiplos pontos finais.
 
+Existem também definições diferentes para cada caso de uso de API, abaixo
+seguem ditas definições de acordo com o blog do site www.syndle.com:
+
+1. API de dados
+As APIs de dados fornecem a vários bancos de dados ou provedores 
+SaaS (Software as a Service ou Software como Serviço) um acesso 
+CRUD (Create, Read, Update, Delete) a conjuntos de dados subjacentes, 
+permitindo a comunicação entre uma aplicação e um sistema de gestão de base 
+de dados.
+
+2. API de sistemas operacionais
+Este grupo de APIs define como as aplicações utilizam os recursos e serviços 
+disponíveis do sistema operacional. Assim, cada OS (Operative System) 
+possui um conjunto de APIs, por exemplo, a API do Windows ou a API do Linux 
+possuem kernel-user space API e kernel internal API.
+
+3. APIs remotas
+Este grupo define os padrões de interação que as aplicações têm em 
+diferentes dispositivos, ou seja, um software acessa determinados recursos 
+localizados fora do dispositivo requerente, como o nome indica. Como duas 
+aplicações se ligam remotamente através de uma rede, as APIs remotas 
+utilizam protocolos para conseguir a ligação.
+
+4. APIs web
+Esta classe de APIs é a mais comum, uma vez que as APIs web fornecem dados 
+que os dispositivos podem ler e transferir entre sistemas baseados na web ou 
+arquitetura cliente-servidor.
+
+Além de suas diferentes definições, APIs também possuem diferentes protocolos
+que possibilitam normatizar trocas de dados e instruções entre serviços.
+Desta forma as APIs adquirem a capacidade de acessar as capacidades de
+variados tipos de sistema e serviço, por entre linguagens de programação
+diferentes e sistemas operacionais diferentes. Dentre esses protocolos os
+mais conhecidos e importantes são:
+
+REST(Representational State Transfer)
+
+REST é um protocolo de arquitetura de software com seis restrições para
+o desenvolvimento de aplicações que correm sobre HTTP, com destaque para
+serviços web.
+
+REST é um dos protocolos mais populares e é considerado uma alternativa mais
+rápida para o protocolo SOAP já que muitos desenvolvedores têm dificuldade
+em usa-la por ter que tecer muitas linhas de código para apenas uma tarefa 
+enquanto que REST segue uma linha diferente, provendo disponibilidade de
+dados como recurso.
+
+SOAP(Service Object Access Protocol)
+
+O SOAP é um protocolo considerado dos mais leves para movimentação de dados
+em ambiente descentralizado e distribuído. O mesmo possui especificações de
+regras para sintaxe de pedidos e para as respostas enviadas pelos pedidos.
+
+Aplicações que usam essas normas permitem o envio de mensagens 
+XML(Extensible Markup Language) pelo sistema usando 
+HTTP(Hypertext Transfer Protocol) ou SMTP(Simple Mail Transfer Protocol).
+
+RPC(Remote Procedure Call)
+
+O procedimento remoto ou RPC se baseia no uso do intercâmbio de recursos em
+APIs web e seu principal objetivo é definir as interações entre aplicações
+em um programa que solicita dados(cliente) e outro que fornece(servidor)
+remotamente.
+
+GraphQL
+
+Nascido da necessidade de desenvolver mais rápido, o GraphQL tem um 
+carregamento de dados mais eficiênte com mais adaptabilidade móvel.
+
+Nessa linguagem de consulta de API, o cliente pode solicitar dados mais
+detalhadamente e auxilia na adição de informação através de simplicidade
+por meio de diversas fontes.
+
+Entraremos mais a fundo em APIs do protocolo REST abaixo.
 
 
 
