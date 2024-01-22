@@ -262,6 +262,31 @@ armazenamento em cache, cookies e mais. Os cabeçalhos de solicitação e
 cabeçalhos de resposta, juntamente aos códigos de status HTTP convencionais, 
 são usados dentro de APIs de REST bem projetadas.
 
+Finalmente chegamos a um breve estudo sobre as melhores práticas de uso da
+API de REST.
+Da mesma maneira que a flexibilidade das APIs de REST são uma grande vantagem,
+a mesma flexibilidade abre caminho para criação de APIs defeituosas que
+performam mal e geram prejuizo no fluxo de trabalho de uma equipe. Assim, se
+torna importante a execução das melhores práticas de uso pelos profissionais
+que usam APIs de REST em seu trabalho, práticas essas que são aprimoradas e
+compartilhadas por todos na indústria.
+
+Para auxiliar no uso das melhores práticas, foi criada a 
+OAS(OpenAPI Specification), uma ferramenta que organiza informações chave
+numa interface intuitiva, criando acessibilidade aos desenvolvedores e seus
+aplicativos para que tenham acesso às principais características de uma 
+determinada API, documentando seus principais recursos, normas, terminais,
+operações permitidas para determinado terminal, parâmetros das operações,
+normas de autenticação e etc...
+
+A segurança também entra como elemento chave para termos boas práticas com
+APIs de REST, tendo noção de suas falhas e vulnerabilidades, se torna
+necessário o uso de diversos métodos para aumentar a segurança da API, como
+JSON Web Tokens, algoritmos de hashing, validação de parâmetros, o próprio
+uso de HTTPS para mover dados também ajuda na segurança, além de registros
+de data, hora e permissões para aplicativos terceiros, para isso podemos usar
+estruturas de autorização como o OAuth 2.0 juntamente do cabeçalho HTTP.
+
 Vemos que APIs se tornaram um pilar da programação e desenvolvimento moderno,
 a industria percebeu e adotou seu potencial nos ultimos anos, tornando APIs
 em uma das áreas mais competitivas e contestadas da história dos computadores
