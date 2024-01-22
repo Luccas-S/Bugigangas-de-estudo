@@ -2,3 +2,25 @@ Nesse documento estarei anotando e expondo meu estudo no conceito de
 QA(Quality Assurance) e áreas próximas, me baseando em diversas fontes as
 quais recorri como artigos, videos e livros.
 
+Um dos temas mais importantes quando se trata de criar um produto ou serviço
+seja ele físico ou digital é a qualidade, com ela vem a segurança, 
+confiabilidade e eficácia, é uma questão determinante para toda empresa e 
+ditará seu progresso e sua chance de sucesso em seus planos de negócio
+estratégicos, não assegurar que seu produto tenha qualidade antes do
+lançamento põe em risco sua imagem, reputação, credibilidade, todos
+sinônimos que indicam perda de interesse do cliente, perda em oportunidades
+de negócios e parcerias futuras. É refletido em todos esses fatores a 
+importância do QA, logo, deve-se manter em mente sempre a idéia de que erros,
+apesar de serem parte da natureza humana, não passarão, é pensando nisso que
+precisamos manter em evidência os testes de qualidade, pois quando um erro
+passa despercebido não tem mais volta, a indústria e o público irão não só
+notar o erro como irão deixar bem clara a sua existência, e com isso vem
+as consequências.
+
+É para evitar as consequências que entram os testes de qualidade, adotando
+medidas para apontar falhas, vulnerabilidades e exploits de um produto ou
+serviço antes desse ser lançado ao público, tornando mais fácil a correção
+desses erros antes que virem uma bola de neve imparável, assim evitando 
+futuros problemas como a quebra do fluxo de trabalho e o desgaste promovido
+pela interação com o cliente, é nessa brecha que entra o QA.
+
