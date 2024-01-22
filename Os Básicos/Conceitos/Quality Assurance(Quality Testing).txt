@@ -1,0 +1,4 @@
+Nesse documento estarei anotando e expondo meu estudo no conceito de 
+QA(Quality Assurance) e áreas próximas, me baseando em diversas fontes as
+quais recorri como artigos, videos e livros.
+
