@@ -98,3 +98,17 @@ auxilia o QA em todos os passos do desenvolvimento de um projeto novo, com
 ele, o QA pode saber com antecedência as tendências de erro dos projetos
 e já agir desde antes para evitar erros em áreas específicas.
 
+Entendendo a importância do QA, podemos fitar agora os benefícios que
+abrangem uma gama enorme de funções e objetivos de uma empresa, a começar
+justamente pelo maior benefício, no caso a melhor gestão de recursos, o
+QA auxilia uma empresa a ter gastos inteligentes e eficiêntes, garantindo
+produtividade enquanto diminui drásticamente a chance de erros, e como
+erros custam caro depois que o produto sai se torna visível o benefício
+que QA traz com recursos, a empresa economiza tempo e gastos de reparos,
+devoluções, logística e etc. Outro notável benefício trazido por QA é 
+a garantia de uma melhor reputação na indústria, uma empresa que lança
+produtos defeituosos sofre internamente com gastos e externamente com
+uma imagem manchada e por consequência, menos clientes futuros. Por fim,
+QA mostra seu valor também com o constante ímpeto a colaborar e criar um
+fluxo de trabalho livre de dores de cabeça tanto aos funcionários quanto
+aos sócios, 
