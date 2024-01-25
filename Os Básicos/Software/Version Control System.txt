@@ -1,0 +1,3 @@
+Neste documento de texto estarei catalogando meus estudos a respeito de
+VCS(Version Control System), suas funções, nuances e importância.
+
