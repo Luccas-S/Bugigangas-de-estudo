@@ -1,3 +1,7 @@
 Neste documento de texto estarei catalogando meus estudos a respeito de
 VCS(Version Control System), suas funções, nuances e importância.
 
+VCS, SCM ou Versionamento é um software que permite o gerenciamento de
+diferentes versões de um documento, permitindo o desenvolvimento contínuo
+por múltiplas fontes. Plataformas de versionamento como essas são uma das
+se não a ferramenta mais importante para 
