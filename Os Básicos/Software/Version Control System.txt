@@ -4,4 +4,67 @@ VCS(Version Control System), suas funções, nuances e importância.
 VCS, SCM ou Versionamento é um software que permite o gerenciamento de
 diferentes versões de um documento, permitindo o desenvolvimento contínuo
 por múltiplas fontes. Plataformas de versionamento como essas são uma das
-se não a ferramenta mais importante para 
+se não a ferramenta mais importante para administrar progresso de projetos
+de maneira eficaz e rápidamente ganhou reconhecimento digno de sua 
+importância, sendo usado pelo histórico de código e a documentação em
+quase todo projeto.
+
+VCS é muito comum na indústria da técnologia e é uma das maiores conquistas
+do desenvolvimento de software open-source ou software livre.
+
+Inúmeras são as vantagens trazidas por um controle de versionamento, além
+da segurança do progresso de projetos, VCS também auxilia em:
+
+Melhor gerenciamento de dados e mudanças.
+
+Facilidade na recuperação após erros e fácil acesso a diferentes versões
+de um projeto.
+
+Promove colaboração entre desenvolvedores e a expansão de projetos OS.
+
+Melhor segurança de código fonte.
+
+Melhor controle de qualidade.
+
+Controle de histórico acessível, possibilitando análise e alteração no 
+progresso já feito.
+
+Fácil rastreabilidade, com log de local, estado e qualidade de arquivos.
+
+Alta capacidade organizacional, com uma interface visual fácil de aprender
+e um leque grande de como organizar seus projetos.
+
+A lista poderia continuar, mas está mais do que claro a importância e a
+utilidade desse tipo de sistema.
+
+Existem diversos frameworks de versionamento, cada um com suas peculiaridades
+porém todos funcionando de uma maneira parecida e com um mesmo objetivo em
+mente, existem os softwares open-source como CVS, SVN(Subversion), Git e
+Mercurial, também existem os softwares comerciais como ClearCase, PVCS(Serena),
+TFS e SourceSafe. O Git é o mais comum entre eles apesar das poucas reais
+diferenças entre softwares.
+Inicialmente optar por uma solução comercial para lidar com VCS pode parecer
+estranho, porém, tais soluções possuem seus méritos e capacidades que os
+distinguem, o principal deles é a segurança e recuperação de dados, coisa
+que soluções open-source não podem prometer por mais que uma eventual falha
+seja comprovadamente causada pelas mesmas.
+
+VCS apesar de não consistir de apenas uma solução, contém diversos comandos
+e instruções que são comuns e são compartilhados com outros softwares, seja
+em como são escritos e como funcionam. Segue lista com os mais comuns:
+
+add: Adiciona um arquivo ao índice de versionamento.
+commit: Cria um novo commit no repositório.
+push: Envia os commits para um repositório remoto.
+pull: Baixa os commits do repositório remoto.
+branch: Cria uma nova ramificação no repositório.
+merge: Une duas ramificações.
+rebase: Rebaseia uma ramificação em outra.
+clone: Cria uma cópia local de um repositório remoto.
+diff: Mostra as diferenças entre dois commits ou dois arquivos.
+log: Mostra o histórico de commits do repositório.
+status: Mostra o estado do repositório, incluindo quais arquivos estão modificados ou adicionados.
+tag: Cria uma nova tag para um commit.
+reset: Desfaz um commit ou uma ramificação.
+checkout: Muda para uma ramificação ou um commit específico.
+
