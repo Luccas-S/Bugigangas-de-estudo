@@ -136,5 +136,15 @@ Se o desenvolvedor quer atualizar sua working copy com as alterações mais
 recentes do repositório, ele deve fazer um update. O update baixa as 
 alterações mais recentes do repositório e as aplica na working copy.
 
+O envio e o resgate de versões são funções importantes do sistema de 
+controle de versão. O envio de uma versão consiste em adicionar as 
+alterações feitas no documento ao repositório. O resgate de uma versão 
+permite recuperar uma versão anterior do documento.
 
+O envio das alterações é feito a gosto do desenvolvedor, mas é recomendável 
+que seja feito a cada vez que o software estiver minimamente estável. Isso 
+evita conflitos de versões e facilita o desfazer de alterações.
+
+Cada envio é chamado de "commit" (ou "submit") e produz uma nova versão no 
+repositório. Cada versão é armazenada como uma "fotografia" do momento.
 
