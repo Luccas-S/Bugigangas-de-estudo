@@ -114,5 +114,27 @@ Se o cliente está em uma máquina diferente do servidor, ele pode acessar o
 repositório pela rede. Isso é mais lento e menos conveniente, mas pode ser 
 mais fácil de gerenciar se o repositório estiver muito grande.
 
+O repositório é um local onde as informações são armazenadas. Ele pode ser 
+um sistema de arquivos ou um banco de dados. Os arquivos e diretórios são 
+organizados em uma hierarquia, o que facilita a navegação e a busca por 
+informações.
+
+Os clientes podem se conectar ao repositório e acessar as informações nele 
+armazenadas. Os clientes podem fazer alterações nos arquivos e diretórios, 
+e essas alterações são sincronizadas com o repositório.
+
+Cada desenvolvedor possui uma cópia local dos arquivos e diretórios do 
+repositório. Essa cópia é chamada de working copy. A working copy é 
+atualizada periodicamente com as alterações feitas no repositório.
+
+Quando o desenvolvedor faz uma alteração relevante nos arquivos da working 
+copy, ele deve submeter (commit) essas alterações para o repositório. 
+O servidor então guarda a nova alteração junto de todo o histórico mais 
+antigo.
+
+Se o desenvolvedor quer atualizar sua working copy com as alterações mais 
+recentes do repositório, ele deve fazer um update. O update baixa as 
+alterações mais recentes do repositório e as aplica na working copy.
+
 
 
