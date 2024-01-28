@@ -148,3 +148,8 @@ evita conflitos de versões e facilita o desfazer de alterações.
 Cada envio é chamado de "commit" (ou "submit") e produz uma nova versão no 
 repositório. Cada versão é armazenada como uma "fotografia" do momento.
 
+Ao armazenar um arquivo diretamente em um sistema de arquivos simples, não 
+há registro automático de suas modificações. Para manter um histórico, é 
+necessário criar backups completos do arquivo em diferentes momentos. 
+A organização desses backups em pastas fica a cargo do desenvolvedor.
+
