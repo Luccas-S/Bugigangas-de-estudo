@@ -68,3 +68,51 @@ tag: Cria uma nova tag para um commit.
 reset: Desfaz um commit ou uma ramificação.
 checkout: Muda para uma ramificação ou um commit específico.
 
+Termos técnicos
+
+Controle de versão: O controle de versão é o processo de rastrear e 
+controlar as alterações feitas em arquivos ao longo do tempo.
+
+Software de controle de versão: Um software de controle de versão é um 
+sistema de gerenciamento de arquivos que permite rastrear e controlar as 
+alterações feitas em arquivos ao longo do tempo.
+
+Controle de acesso: O controle de acesso é um mecanismo que permite que os 
+usuários definam quais usuários podem acessar quais arquivos e quais 
+alterações podem ser feitas.
+
+Histórico de alterações: O histórico de alterações é um registro de todas as 
+alterações feitas em arquivos, permitindo que os usuários visualizem e 
+revertam alterações anteriores.
+
+Comparação de arquivos: A comparação de arquivos é uma funcionalidade que 
+permite que os usuários comparem duas versões diferentes de um arquivo para 
+ver as diferenças entre elas.
+
+Integração com o editor de texto: A integração com o editor de texto é uma 
+funcionalidade que permite que os usuários façam alterações em arquivos 
+diretamente no software de controle de versão, sem ter que sair do editor de
+texto.
+
+Os sistemas de controle de versão são muito parecidos, mas cada um tem suas 
+próprias características. No entanto, a maioria deles compartilham alguns 
+conceitos básicos.
+(Nota: Apesar disso, é possível que algum sistema específico funcione de 
+maneira totalmente diferente da explicada neste capítulo.)
+
+O repositório é o local onde todas as informações sobre o projeto são 
+armazenadas. Ele contém o código-fonte do projeto, bem como o histórico de 
+todas as alterações que foram feitas. O repositório geralmente é armazenado 
+em um servidor, mas também pode ser armazenado localmente, na máquina do 
+desenvolvedor.
+
+Se o cliente está na mesma máquina do servidor, ele pode acessar o 
+repositório localmente. Isso é mais rápido e conveniente, mas pode ser mais 
+difícil de gerenciar se o repositório estiver muito grande.
+
+Se o cliente está em uma máquina diferente do servidor, ele pode acessar o 
+repositório pela rede. Isso é mais lento e menos conveniente, mas pode ser 
+mais fácil de gerenciar se o repositório estiver muito grande.
+
+
+
