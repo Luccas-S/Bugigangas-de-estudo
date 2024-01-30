@@ -319,3 +319,32 @@ Desvantagens:
 Menos flexibilidade: Apenas um usuário edita por vez.
 Possível lentidão no processo de desenvolvimento.
 Sistemas que usam: ClearCase, SourceSafe.
+
+Sistemas com Suporte ao Bloqueio:
+
+Alguns sistemas de controle de versão, como CVS e SVN 
+(a partir da versão 1.2.0), permitem o bloqueio voluntário de arquivos. 
+Essa funcionalidade oferece diversas vantagens em situações específicas.
+
+Casos Úteis para o Bloqueio de Arquivos:
+
+Trabalho Simultâneo com Dificuldade de Mesclagem: Quando vários 
+desenvolvedores trabalham em um mesmo arquivo que apresenta dificuldade ou 
+impossibilidade de mesclagem, o bloqueio evita conflitos e garante a 
+integridade do código.
+Edição de Arquivos Binários: Arquivos binários, como imagens, bibliotecas e 
+arquivos compactados, não podem ser mesclados. O bloqueio garante que 
+apenas um desenvolvedor edite o arquivo por vez, evitando perda de dados ou 
+corrupção do arquivo.
+Dificuldade na Comunicação e Conflitos Frequentes: Em ambientes com 
+comunicação precária entre os desenvolvedores, o bloqueio de arquivos pode 
+ser uma solução para reduzir conflitos frequentes e o tempo gasto na 
+resolução manual de mesclagem.
+Observações Importantes:
+
+Limitação da Técnica: O bloqueio de arquivos não elimina completamente os 
+conflitos, mas sim os transfere para um momento posterior, quando o arquivo 
+for desbloqueado.
+Comunicação e Planejamento: A comunicação eficaz e o planejamento do 
+trabalho entre os desenvolvedores continuam sendo essenciais para evitar 
+problemas, mesmo com o uso do bloqueio de arquivos.
