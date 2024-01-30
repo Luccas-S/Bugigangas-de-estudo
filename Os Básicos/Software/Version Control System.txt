@@ -153,3 +153,139 @@ há registro automático de suas modificações. Para manter um histórico, é
 necessário criar backups completos do arquivo em diferentes momentos. 
 A organização desses backups em pastas fica a cargo do desenvolvedor.
 
+
+Histórico de Envio: Compreendendo suas Funções e Importância
+O histórico de envio, também conhecido como "log", registra as alterações 
+feitas em um arquivo ou conjunto de arquivos ao longo do tempo. Ele fornece 
+informações valiosas sobre quem fez as alterações, quando elas foram feitas 
+e o que foi modificado.
+
+Benefícios do Histórico de Envio:
+
+Rastreamento de alterações: Permite acompanhar a evolução do projeto e 
+identificar quem fez quais alterações.
+Análise de mudanças: Facilita a compreensão do que foi modificado e por quê.
+Reversibilidade: Permite reverter para uma versão anterior do arquivo caso 
+haja algum problema.
+Colaboração aprimorada: Facilita a comunicação entre os membros da equipe 
+sobre as alterações feitas.
+
+Comentários Informativos:
+
+Ao enviar alterações, é importante adicionar comentários descritivos que 
+expliquem o que foi mudado e por quê. Isso torna o histórico de envio mais 
+útil e informativo para quem o consulta posteriormente.
+
+Recomendações para Comentários:
+
+Clareza e concisão: Use linguagem simples e direta para explicar as 
+alterações.
+Foco no conceito: Explique o que foi mudado no conceito ou funcionamento do 
+código, não apenas as alterações no código em si.
+Exemplos: Utilize exemplos para ilustrar as alterações e facilitar a 
+compreensão.
+
+Exemplo Prático:
+
+Em vez de comentar:
+
++ if (!this.haSaldoNaConta()) { this.proibeSaque() }
+Comente:
+
+Acréscimo de uma condição que verifica se existe saldo na conta para não 
+permitir saque sem saldo.
+
+Conclusão:
+
+O histórico de envio é uma ferramenta essencial para o desenvolvimento de 
+software. Ao utilizá-lo de forma eficaz, você pode melhorar a comunicação, 
+a colaboração e a qualidade do seu projeto.
+
+Termos Técnicos:
+
+Histórico de envio: Registro das alterações feitas em um arquivo ou conjunto 
+de arquivos.
+Log: Sinônimo de histórico de envio.
+Versão: Uma cópia específica de um arquivo em um determinado momento.
+Comentário: Descrição que explica o que foi mudado em uma versão.
+Diferença (ou diff): Ferramenta que compara duas versões de um arquivo e 
+mostra as diferenças entre elas.
+
+Trabalho em equipe com sistemas de controle de versão
+
+Facilitando o trabalho colaborativo:
+
+Sistemas de controle de versão facilitam o trabalho em equipe quando vários 
+desenvolvedores trabalham no mesmo projeto simultaneamente. Eles oferecem 
+recursos para gerenciar alterações, resolver conflitos e manter um histórico 
+completo do projeto.
+
+Funcionalidades para trabalho em equipe:
+
+Ramificação: Permite criar diferentes versões do projeto a partir de um 
+ponto comum, facilitando a experimentação e o desenvolvimento em paralelo.
+
+Mesclagem: Integra as alterações feitas em diferentes ramificações, 
+permitindo combinar o trabalho de vários desenvolvedores.
+
+Controle de usuários: Permite identificar quem fez cada alteração e garantir 
+a segurança do projeto.
+
+Histórico de alterações: Permite acompanhar a evolução do projeto e 
+reverter para versões anteriores caso haja algum problema.
+
+Métodos de edição:
+
+Existem dois métodos principais de edição em sistemas de controle de versão:
+
+1. Mesclagens otimistas:
+
+Permite que os desenvolvedores trabalhem em diferentes versões do projeto ao 
+mesmo tempo.
+Os conflitos de mesclagem são detectados e o desenvolvedor precisa 
+resolvê-los manualmente.
+É mais flexível e permite um desenvolvimento mais rápido, mas pode ser mais 
+propenso a conflitos.
+
+2. Edições exclusivas:
+
+Apenas um desenvolvedor pode editar um arquivo por vez.
+Evita conflitos de mesclagem, mas pode ser mais lento e menos flexível.
+Sistemas de controle de versão populares:
+
+CVS: Um sistema antigo, mas ainda usado por alguns projetos.
+SVN: Um sistema mais moderno e popular que o CVS.
+Git: Um sistema moderno e popular que oferece muitas funcionalidades 
+avançadas.
+
+Escolha do método de edição:
+
+A escolha do método de edição depende das necessidades do projeto e da 
+equipe.
+
+Observações:
+
+A ausência de um sistema de controle de versão é equivalente ao método de 
+"Edições exclusivas".
+
+Alguns sistemas, como o MediaWiki, permitem a edição simultânea de arquivos, 
+mas os conflitos precisam ser resolvidos manualmente.
+
+Conclusão:
+
+Sistemas de controle de versão são ferramentas essenciais para o trabalho 
+em equipe em projetos de software. Eles facilitam a colaboração entre 
+desenvolvedores, garantem a segurança do projeto e permitem acompanhar a 
+evolução do projeto.
+
+Termos técnicos:
+
+Ramificação: Criar diferentes versões do projeto a partir de um ponto comum.
+Mesclagem: Integrar as alterações feitas em diferentes ramificações.
+Controle de usuários: Gerenciar quem tem acesso ao projeto e quais alterações 
+podem fazer.
+Histórico de alterações: Registro de todas as alterações feitas no projeto.
+Mesclagem otimista: Permite que os desenvolvedores trabalhem em diferentes 
+versões do projeto ao mesmo tempo.
+Edição exclusiva: Apenas um desenvolvedor pode editar um arquivo por vez.6
+
