@@ -289,3 +289,33 @@ Mesclagem otimista: Permite que os desenvolvedores trabalhem em diferentes
 versões do projeto ao mesmo tempo.
 Edição exclusiva: Apenas um desenvolvedor pode editar um arquivo por vez.6
 
+Mesclagens Otimistas vs. Edições Exclusivas: Abordagens Divergentes para 
+Controle de Versões
+
+Mesclagens Otimistas:
+
+Filosofia: Assume que os conflitos de edição são raros e pontuais com 
+atualizações frequentes do repositório.
+
+Vantagens:
+Agilidade: Automação da fusão acelera o desenvolvimento e integração de 
+código.
+Eficiência: Minimiza o tempo e o esforço na resolução de conflitos.
+Produtividade: Permite foco em tarefas mais importantes.
+
+Desvantagens:
+Possíveis conflitos manuais em alterações no mesmo ponto do mesmo arquivo.
+Sistemas que usam: SVN, CVS, Git (opcional).
+
+Edições Exclusivas:
+
+Filosofia: Assume que muitas modificações simultâneas sem atualizações 
+frequentes podem levar a fusões manuais complexas.
+
+Vantagens:
+Evita conflitos manuais durante a edição.
+
+Desvantagens:
+Menos flexibilidade: Apenas um usuário edita por vez.
+Possível lentidão no processo de desenvolvimento.
+Sistemas que usam: ClearCase, SourceSafe.
